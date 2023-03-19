@@ -1,0 +1,2 @@
+# financeManager
+simple finance manager 
