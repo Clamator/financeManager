@@ -21,6 +21,12 @@ const routes = [
         /* webpackChunkName: "diagrams" */ "../views/TransactionsView.vue"
       ),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notFound",
+    component: () =>
+      import(/* webpackChunkName: "diagrams" */ "../components/NotFound.vue"),
+  },
 ];
 
 const router = createRouter({
