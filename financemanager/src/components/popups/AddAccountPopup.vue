@@ -24,6 +24,7 @@
         <div class="modal-body">
           <div class="input-group mb-3">
             <input
+              v-model="accName"
               type="text"
               placeholder="Account name"
               class="form-control"
@@ -34,12 +35,17 @@
 
           <div class="input-group">
             <input
+              v-model="moneyAmount"
               type="text"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select class="form-select" aria-label="Default select example">
+            <select
+              v-model="currency"
+              class="form-select"
+              aria-label="Default select example"
+            >
               <option selected>Choose currency</option>
               <option value="$">$</option>
               <option value="€">€</option>
@@ -56,7 +62,15 @@
           >
             Cancel adding
           </button>
-          <button type="button" class="btn btn-primary">Add account!</button>
+          <button
+            @click="
+              $store.mutations.ADD_CURRENCY(accName, moneyAmount, currency)
+            "
+            type="button"
+            class="btn btn-primary"
+          >
+            Add account!
+          </button>
         </div>
       </div>
     </div>
@@ -66,6 +80,13 @@
 <script>
 export default {
   name: "AddAccountPopup",
+  data() {
+    return {
+      accName: "",
+      moneyAmount: "",
+      currency: "Choose currency",
+    };
+  },
 };
 </script>
 

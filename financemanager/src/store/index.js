@@ -3,12 +3,12 @@ import { createStore } from "vuex";
 const store = createStore({
   state: {
     accounts: {
-      1: {
+      Sberbank: {
         name: "Sberbank",
         money: 5000,
         currency: "$",
       },
-      2: {
+      Cash: {
         name: "Cash",
         money: 5000,
         get currency() {
@@ -25,6 +25,7 @@ const store = createStore({
     accountToAddName: "",
     moneyToAddQuantity: null,
     moneyToAddCurrency: "",
+    withdrawCategories: [],
   },
   getters: {
     getDollarCurrency: (state) => {
@@ -34,7 +35,18 @@ const store = createStore({
       return state.currency.euro;
     },
   },
-  mutations: {},
+  mutations: {
+    ADD_CURRENCY(state, { accName, money, currency }) {
+      state.accounts = {
+        ...state.accounts,
+        [accName]: {
+          name: accName,
+          money: money,
+          currency: currency,
+        },
+      };
+    },
+  },
   actions: {},
   modules: {},
 });
