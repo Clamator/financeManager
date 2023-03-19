@@ -14,7 +14,7 @@
 
         <analytics-area></analytics-area>
 
-        <wallet-buttons></wallet-buttons>
+        <wallet-side-bar></wallet-side-bar>
 
         <options-buttons></options-buttons>
 
@@ -31,7 +31,7 @@ import LogoMain from "@/components/LogoMain";
 import UserAccount from "@/components/UserAccount";
 import TransactionArea from "@/components/TransactionArea";
 import OptionsButtons from "@/components/OptionsButtons";
-import WalletButtons from "@/components/WalletButtons";
+import WalletSideBar from "@/components/WalletSideBar";
 import AnalyticsArea from "@/components/AnalyticsArea";
 import HomeButton from "@/components/HomeButton";
 import RefillWithdrawButtons from "@/components/RefillWithdrawButtons";
@@ -43,7 +43,7 @@ export default {
     UserAccount,
     TransactionArea,
     OptionsButtons,
-    WalletButtons,
+    WalletSideBar,
     AnalyticsArea,
     HomeButton,
     RefillWithdrawButtons,

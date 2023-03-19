@@ -5,24 +5,34 @@
     data-bs-parent="#menu"
   >
     <li class="w-100">
-      <button type="button" class="btn btn-info mx-3">Add account</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Add account
+      </button>
     </li>
-    <li class="w-100">
-      <a href="#" class="nav-link px-0">
-        <span class="d-none d-sm-inline">Sberbank</span> 1
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link px-0">
-        <span class="d-none d-sm-inline">Cash</span> 2
-      </a>
+    <li class="w-100" v-for="acc in accounts" :key="acc">
+      <button type="button" class="btn btn-link">
+        {{ acc.name }} / {{ acc.money }} {{ acc.currency }}
+      </button>
     </li>
   </ul>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "WalletAccounts",
+  data() {
+    return {};
+  },
+  computed: mapState({
+    accounts: (state) => state.accounts,
+    // currency: (state) => state.currency,
+  }),
 };
 </script>
 

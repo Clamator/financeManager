@@ -21,7 +21,7 @@
 <script>
 import WalletAccounts from "@/components/WalletAccounts";
 export default {
-  name: "WalletButtons",
+  name: "WalletSideBar",
   components: {
     WalletAccounts,
   },

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row flex-nowrap">
       <side-bar class="py-2"></side-bar>
-      <main-window />
+      <main-window> </main-window>
     </div>
   </div>
 </template>
