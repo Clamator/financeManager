@@ -62,6 +62,7 @@ const store = createStore({
     DELETE_CHOSEN_CATEGORY(state, catName) {
       // мы получаем имя категории в виде текста, его надо убирать из категории
       delete state.categories[catName.catName];
+      localStorage.setItem("categories", JSON.stringify(state.categories));
     },
   },
   actions: {},
