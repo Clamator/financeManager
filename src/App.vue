@@ -17,6 +17,9 @@ export default {
     MainWindow,
   },
   created() {
+    if (!localStorage.getItem("categories")) {
+      localStorage.setItem("categories", JSON.stringify({}));
+    }
     store.commit("GET_ACCS_FROM_LOCAL_STORAGE");
   },
 };

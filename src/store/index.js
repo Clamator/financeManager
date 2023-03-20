@@ -4,11 +4,11 @@ const store = createStore({
   state: {
     accounts: {},
     categories: {
-      Medicine: {
-        catId: 1,
-        catName: "Medicine",
-        userId: 1,
-      },
+      // Medicine: {
+      //   catId: 1,
+      //   catName: "Medicine",
+      //   userId: 1,
+      // },
     },
     currency: {
       dollar: "$",
@@ -47,11 +47,13 @@ const store = createStore({
       state.categories = JSON.parse(localStorage.getItem("categories"));
     },
     ADD_CATEGORY(state, catName) {
-      console.log(state.categories);
+      // console.log(state.categories);
+      // null на state.categories
       // if (state.categories === null) return;
       state.categories = {
         ...state.categories,
         [catName.catName]: {
+          // нужен обработчик для категории
           catId: Object.entries(state.categories).length + 1,
           catName: catName.catName,
           userId: 1,
