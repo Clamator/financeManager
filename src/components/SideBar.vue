@@ -19,6 +19,7 @@
         <options-buttons></options-buttons>
 
         <transaction-area></transaction-area>
+        <categories-area></categories-area>
       </ul>
       <hr />
       <user-account></user-account>
@@ -35,6 +36,7 @@ import WalletSideBar from "@/components/WalletSideBar";
 import AnalyticsArea from "@/components/AnalyticsArea";
 import HomeButton from "@/components/HomeButton";
 import RefillWithdrawButtons from "@/components/RefillWithdrawButtons";
+import CategoriesArea from "@/components/CategoriesArea";
 
 export default {
   name: "SideBar",
@@ -47,6 +49,7 @@ export default {
     AnalyticsArea,
     HomeButton,
     RefillWithdrawButtons,
+    CategoriesArea,
   },
 };
 </script>

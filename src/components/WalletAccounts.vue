@@ -31,7 +31,6 @@ export default {
   },
   computed: mapState({
     accounts: (state) => state.accounts,
-    // currency: (state) => state.currency,
   }),
 };
 </script>

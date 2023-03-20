@@ -1,6 +1,7 @@
 <template>
   <div
     class="modal fade"
+    ref="myModal"
     id="staticBackdrop"
     data-bs-backdrop="static"
     data-bs-keyboard="false"
@@ -63,11 +64,9 @@
             Cancel adding
           </button>
           <button
-            @click="
-              $store.mutations.ADD_CURRENCY(accName, moneyAmount, currency)
-            "
+            @click="addCurrency"
             type="button"
-            class="btn btn-primary"
+            class="btn btn-primary btn-success"
           >
             Add account!
           </button>
@@ -78,6 +77,7 @@
 </template>
 
 <script>
+import store from "@/store";
 export default {
   name: "AddAccountPopup",
   data() {
@@ -86,6 +86,18 @@ export default {
       moneyAmount: "",
       currency: "Choose currency",
     };
+  },
+  methods: {
+    // hideModal() {
+    //   let modal = document.getElementById("staticBackdrop");
+    // },
+    addCurrency() {
+      store.commit("ADD_CURRENCY", {
+        name: this.accName,
+        money: this.moneyAmount,
+        currency: this.currency,
+      });
+    },
   },
 };
 </script>

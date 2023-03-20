@@ -10,22 +10,22 @@ const routes = [
   {
     path: "/diagrams",
     name: "diagrams",
-    component: () =>
-      import(/* webpackChunkName: "diagrams" */ "../views/DiagramView.vue"),
+    component: () => import("../views/DiagramView.vue"),
   },
   {
     path: "/transactions",
     name: "transactions",
-    component: () =>
-      import(
-        /* webpackChunkName: "diagrams" */ "../views/TransactionsView.vue"
-      ),
+    component: () => import("../views/TransactionsView.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
     name: "notFound",
-    component: () =>
-      import(/* webpackChunkName: "diagrams" */ "../components/NotFound.vue"),
+    component: () => import("../components/NotFound.vue"),
+  },
+  {
+    path: "/categories",
+    name: "categories",
+    component: () => import("../views/CategoriesView.vue"),
   },
 ];
 

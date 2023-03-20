@@ -9,12 +9,15 @@
 <script>
 import SideBar from "@/components/SideBar";
 import MainWindow from "@/components/MainWindow";
-
+import store from "@/store";
 export default {
   name: "App",
   components: {
     SideBar,
     MainWindow,
+  },
+  created() {
+    store.commit("GET_ACCS_FROM_LOCAL_STORAGE");
   },
 };
 </script>
