@@ -3,7 +3,7 @@
     <div
       class="card bg-opacity-75 bg-info"
       style="width: 18rem; min-height: 130px"
-      v-for="(cat, indx) in categories"
+      v-for="(cat, indx) in allCategories"
       :key="indx"
     >
       <div class="card-body">
@@ -46,6 +46,11 @@ export default {
       categories: store.state.categories,
       category: "",
     };
+  },
+  computed: {
+    allCategories() {
+      return store.getters.allCategories;
+    },
   },
   methods: {
     addCategory() {

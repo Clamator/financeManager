@@ -3,21 +3,12 @@ import { createStore } from "vuex";
 const store = createStore({
   state: {
     accounts: {},
+    categories: {},
     currency: {
       dollar: "$",
       euro: "€",
       rouble: "₽",
       tenge: "₸",
-    },
-    categories: {
-      1: { catId: 1, catName: "Eating out", userId: 1 },
-      2: { catId: 2, catName: "Eating at Home", userId: 1 },
-      3: { catId: 3, catName: "Medicine", userId: 1 },
-      // 4: { catId: 3, catName: "Medicine", userId: 1 },
-      // 5: { catId: 3, catName: "Medicine", userId: 1 },
-      // 6: { catId: 3, catName: "Medicine", userId: 1 },
-      // 7: { catId: 3, catName: "Medicine", userId: 1 },
-      // 8: { catId: 3, catName: "Medicine", userId: 1 },
     },
     accountToAddName: "",
     moneyToAddQuantity: null,
@@ -30,6 +21,7 @@ const store = createStore({
     getEuroCurrency: (state) => {
       return state.currency.euro;
     },
+    allCategories: (state) => Object.values(state.categories),
   },
   mutations: {
     ADD_CURRENCY(state, { name, money, currency }) {
