@@ -45,9 +45,11 @@ const store = createStore({
     },
     ADD_ACCS_TO_LOCAL_STORAGE(state) {
       localStorage.setItem("accounts", JSON.stringify(state.accounts));
+      localStorage.setItem("categories", JSON.stringify(state.categories));
     },
     GET_ACCS_FROM_LOCAL_STORAGE(state) {
       state.accounts = JSON.parse(localStorage.getItem("accounts"));
+      state.categories = JSON.parse(localStorage.getItem("categories"));
       console.log(state.accounts);
     },
     ADD_CATEGORY(state, catName) {
@@ -59,6 +61,7 @@ const store = createStore({
           userId: state.categories["1"].userId,
         },
       };
+      store.commit("ADD_ACCS_TO_LOCAL_STORAGE");
     },
   },
   actions: {},

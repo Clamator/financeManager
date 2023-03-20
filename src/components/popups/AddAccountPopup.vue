@@ -88,9 +88,6 @@ export default {
     };
   },
   methods: {
-    // hideModal() {
-    //   let modal = document.getElementById("staticBackdrop");
-    // },
     addCurrency() {
       store.commit("ADD_CURRENCY", {
         name: this.accName,
