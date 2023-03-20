@@ -14,7 +14,7 @@
         Add account
       </button>
     </li>
-    <li class="w-100" v-for="acc in accounts" :key="acc">
+    <li class="w-100" v-for="acc in allAccounts" :key="acc">
       <button type="button" class="btn btn-link">
         {{ acc.name }} / {{ acc.money }} {{ acc.currency }}
       </button>
@@ -23,15 +23,19 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+// import { mapState } from "vuex";
+import store from "@/store";
 export default {
   name: "WalletAccounts",
   data() {
     return {};
   },
-  computed: mapState({
-    accounts: (state) => state.accounts,
-  }),
+  computed: {
+    allAccounts() {
+      if (store.state.accounts === null) return;
+      return store.getters.allAccounts;
+    },
+  },
 };
 </script>
 

@@ -18,7 +18,7 @@
           alt=""
         />
       </div>
-      <button class="remove-button">x</button>
+      <button @click="deleteCategory($event)" class="remove-button">x</button>
     </div>
 
     <div class="card" style="width: 18rem; min-height: 130px">
@@ -26,7 +26,7 @@
         <input
           v-model="this.category"
           placeholder="Enter category name"
-          class="my-3 rounded border-1 bg-opacity-75"
+          class="my-3 rounded ps-2 border-1 bg-opacity-75"
           type="text"
         />
         <button class="btn btn-primary" @click="addCategory">
@@ -45,6 +45,7 @@ export default {
     return {
       categories: store.state.categories,
       category: "",
+      categoryToDelete: "",
     };
   },
   computed: {
@@ -54,16 +55,27 @@ export default {
   },
   methods: {
     addCategory() {
-      store.commit("ADD_CATEGORY", {
-        catName: this.category,
-      });
+      // if (this.category === "") return;
+      // store.commit("ADD_CATEGORY", {
+      //   catName: this.category,
+      // });
+      if (this.category !== "") {
+        store.commit("ADD_CATEGORY", {
+          catName: this.category,
+        });
+      } else {
+        alert("Enter data!!!");
+      }
       this.category = "";
+    },
+    deleteCategory(event) {
+      const target = event.target.parentNode.innerText.slice(0, -2);
+      store.commit("DELETE_CHOSEN_CATEGORY", {
+        catName: target,
+      });
     },
   },
 };
-
-// v-for="(cat, indx) in categories"
-// :key="indx"
 </script>
 
 <style scoped>
@@ -105,9 +117,4 @@ span {
   max-width: 1200px;
   margin: 0 auto;
 }
-/*@media screen and (max-width: 800px) {*/
-/*  .card {*/
-/*    max-height: 100px;*/
-/*  }*/
-/*}*/
 </style>

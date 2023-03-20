@@ -45,10 +45,10 @@
             <select
               v-model="currency"
               class="form-select"
-              aria-label="Default select example"
+              aria-label="Default select"
             >
-              <option selected>Choose currency</option>
-              <option value="$">$</option>
+              <!--              <option selected>Choose currency</option>-->
+              <option selected value="$">$</option>
               <option value="€">€</option>
               <option value="₽">₽</option>
               <option value="₸">₸</option>
@@ -84,7 +84,7 @@ export default {
     return {
       accName: "",
       moneyAmount: "",
-      currency: "Choose currency",
+      currency: "$",
     };
   },
   methods: {
@@ -92,11 +92,17 @@ export default {
     //   let modal = document.getElementById("staticBackdrop");
     // },
     addCurrency() {
-      store.commit("ADD_CURRENCY", {
-        name: this.accName,
-        money: this.moneyAmount,
-        currency: this.currency,
-      });
+      if (this.accName !== "" && this.moneyAmount !== "") {
+        store.commit("ADD_CURRENCY", {
+          name: this.accName,
+          money: this.moneyAmount,
+          currency: this.currency,
+        });
+      } else {
+        alert("Enter data!!!");
+      }
+
+      // document.getElementById("modal-dialog").classList.remove("show");
     },
   },
 };
