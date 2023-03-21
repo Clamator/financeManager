@@ -10,6 +10,7 @@
         class="btn btn-primary"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        @click="isAddAccPopupOpen = true"
       >
         Add account
       </button>
@@ -23,12 +24,13 @@
 </template>
 
 <script>
-// import { mapState } from "vuex";
 import store from "@/store";
 export default {
   name: "WalletAccounts",
   data() {
-    return {};
+    return {
+      isAddAccPopupOpen: false,
+    };
   },
   computed: {
     allAccounts() {

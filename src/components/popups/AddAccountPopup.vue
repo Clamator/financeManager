@@ -1,5 +1,6 @@
 <template>
   <div
+    v-show="true"
     class="modal fade"
     ref="myModal"
     id="staticBackdrop"
@@ -67,6 +68,8 @@
             @click="addCurrency"
             type="button"
             class="btn btn-primary btn-success"
+            data-bs-dismiss="modal"
+            aria-label="Close"
           >
             Add account!
           </button>
@@ -85,6 +88,7 @@ export default {
       accName: "",
       moneyAmount: "",
       currency: "$",
+      isAddAccPopupOpen: false,
     };
   },
   methods: {
@@ -98,6 +102,7 @@ export default {
           money: this.moneyAmount,
           currency: this.currency,
         });
+        this.isAddAccPopupOpen = this.isAddAccPopupOpen === false;
       } else {
         alert("Enter data!!!");
       }

@@ -48,7 +48,7 @@ const store = createStore({
     },
     ADD_CATEGORY(state, catName) {
       // console.log(state.categories);
-      // null на state.categories
+      // null на state.categories, вроде пофиксил, жду, когда Денис сбилдит
       // if (state.categories === null) return;
       state.categories = {
         ...state.categories,
