@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import WalletAccounts from "@/components/WalletAccounts";
+import WalletAccounts from "@/components/WalletAccountsList";
 export default {
   name: "WalletSideBar",
   components: {

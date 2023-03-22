@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row flex-nowrap">
+    <div class="row flex-wrap">
       <side-bar class="py-2"></side-bar>
       <main-window> </main-window>
     </div>
@@ -30,4 +30,6 @@ export default {
 
 <style>
 @import "@/assets/main.css";
+/*@import "@/assets/index.css";*/
+/*@import "~materialize-css/dist/css/materialize.min.css";*/
 </style>

@@ -37,6 +37,11 @@ const routes = [
     name: "reg",
     component: () => import("../views/RegistrationView"),
   },
+  {
+    path: "/history",
+    name: "history",
+    component: () => import("../views/HistoryView"),
+  },
 ];
 
 const router = createRouter({

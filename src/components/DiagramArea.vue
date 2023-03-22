@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "AnalyticsArea",
+  name: "DiagramArea",
 };
 </script>
 

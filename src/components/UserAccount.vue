@@ -17,13 +17,14 @@
       <span class="d-none d-sm-inline mx-1">Clamator</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
       <li><a class="dropdown-item" href="#">Settings</a></li>
       <li><a class="dropdown-item" href="#">Profile</a></li>
       <li>
         <hr class="dropdown-divider" />
       </li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
+      <li>
+        <a class="dropdown-item" @click.prevent="logout" href="#">Sign out</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -31,6 +32,12 @@
 <script>
 export default {
   name: "UserAccount",
+  methods: {
+    logout() {
+      console.log("logged out");
+      this.$router.push("/auth");
+    },
+  },
 };
 </script>
 

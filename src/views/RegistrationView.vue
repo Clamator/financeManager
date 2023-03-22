@@ -163,6 +163,7 @@ export default {
 form {
   max-width: 1000px;
   margin: 200px auto 0;
+  text-align: left;
 }
 .red-alert {
   color: red;

@@ -1,6 +1,6 @@
 <template>
   <div class="col py-3">
-    <div class="col py-3">
+    <div class="py-3">
       <router-view />
     </div>
     <add-account-popup></add-account-popup>

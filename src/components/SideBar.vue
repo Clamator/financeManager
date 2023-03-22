@@ -12,7 +12,7 @@
 
         <refill-withdraw-buttons></refill-withdraw-buttons>
 
-        <analytics-area></analytics-area>
+        <diagram-area></diagram-area>
 
         <wallet-side-bar></wallet-side-bar>
 
@@ -36,8 +36,8 @@ import LogoMain from "@/components/LogoMain";
 import UserAccount from "@/components/UserAccount";
 import TransactionArea from "@/components/TransactionArea";
 import OptionsButtons from "@/components/OptionsButtons";
-import WalletSideBar from "@/components/WalletSideBar";
-import AnalyticsArea from "@/components/AnalyticsArea";
+import WalletSideBar from "@/components/WalletButton";
+import DiagramArea from "@/components/DiagramArea";
 import HomeButton from "@/components/HomeButton";
 import RefillWithdrawButtons from "@/components/RefillWithdrawButtons";
 import CategoriesArea from "@/components/CategoriesArea";
@@ -50,7 +50,7 @@ export default {
     TransactionArea,
     OptionsButtons,
     WalletSideBar,
-    AnalyticsArea,
+    DiagramArea,
     HomeButton,
     RefillWithdrawButtons,
     CategoriesArea,
