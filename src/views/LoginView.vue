@@ -32,7 +32,6 @@
     <router-link class="w-50 btn btn-lg btn-primary rega" to="/reg">
       Registration</router-link
     >
-    <p class="mb-3 text-muted">&copy; 2017–2023</p>
   </form>
   <router-view></router-view>
 </template>

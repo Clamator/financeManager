@@ -35,7 +35,8 @@ export default {
   methods: {
     logout() {
       console.log("logged out");
-      this.$router.push("/auth");
+      this.$router.push("/auth?message=logout");
+      // здесь можно реализовать отображение сообщений пользователю
     },
   },
 };

@@ -1,5 +1,6 @@
 <template>
   <form novalidate @submit.prevent="registerUser">
+    <h1 class="h3 mb-3 fw-normal">Registration</h1>
     <div id="main-wrapper">
       <div class="row">
         <div class="col">
@@ -121,7 +122,7 @@
         />
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Let's start!</button>
     </div>
   </form>
 </template>
