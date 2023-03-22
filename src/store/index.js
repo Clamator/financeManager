@@ -3,13 +3,7 @@ import { createStore } from "vuex";
 const store = createStore({
   state: {
     accounts: {},
-    categories: {
-      // Medicine: {
-      //   catId: 1,
-      //   catName: "Medicine",
-      //   userId: 1,
-      // },
-    },
+    categories: {},
     currency: {
       dollar: "$",
       euro: "€",
@@ -47,15 +41,13 @@ const store = createStore({
       state.categories = JSON.parse(localStorage.getItem("categories"));
     },
     ADD_CATEGORY(state, catName) {
-      // console.log(state.categories);
-      // null на state.categories, вроде пофиксил, жду, когда Денис сбилдит
-      // if (state.categories === null) return;
+      console.log(catName);
       state.categories = {
         ...state.categories,
         [catName.catName]: {
-          // нужен обработчик для категории
           catId: Object.entries(state.categories).length + 1,
           catName: catName.catName,
+          catLimit: catName.catLimit,
           userId: 1,
         },
       };

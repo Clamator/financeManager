@@ -27,6 +27,16 @@ const routes = [
     name: "categories",
     component: () => import("../views/CategoriesView.vue"),
   },
+  {
+    path: "/auth",
+    name: "auth",
+    component: () => import("../views/LoginView"),
+  },
+  {
+    path: "/reg",
+    name: "reg",
+    component: () => import("../views/RegistrationView"),
+  },
 ];
 
 const router = createRouter({

@@ -6,9 +6,12 @@
       v-for="(cat, indx) in allCategories"
       :key="indx"
     >
-      <div class="card-body">
+      <div class="card-body d-flex flex-column justify-content-sm-center">
         <span class="card-title fw-bold fs-4 text-white">
           {{ cat.catName }}
+        </span>
+        <span class="card-text fw-bold fs-4 text-white">
+          {{ cat.catLimit }}
         </span>
       </div>
       <div class="edit-img">
@@ -25,7 +28,13 @@
       <div class="card-body">
         <input
           v-model="this.category"
-          placeholder="Enter category name"
+          placeholder="Enter category name."
+          class="my-3 rounded ps-2 border-1 bg-opacity-75"
+          type="text"
+        />
+        <input
+          v-model="this.limit"
+          placeholder="Enter category limit"
           class="my-3 rounded ps-2 border-1 bg-opacity-75"
           type="text"
         />
@@ -46,6 +55,7 @@ export default {
       categories: store.state.categories,
       category: "",
       categoryToDelete: "",
+      limit: null,
     };
   },
   computed: {
@@ -55,18 +65,16 @@ export default {
   },
   methods: {
     addCategory() {
-      // if (this.category === "") return;
-      // store.commit("ADD_CATEGORY", {
-      //   catName: this.category,
-      // });
-      if (this.category !== "") {
+      if (this.category !== "" && this.limit !== "") {
         store.commit("ADD_CATEGORY", {
           catName: this.category,
+          catLimit: +this.limit,
         });
       } else {
         alert("Enter data!!!");
       }
       this.category = "";
+      this.limit = "";
     },
     deleteCategory(event) {
       const target = event.target.parentNode.innerText.slice(0, -2);
@@ -76,45 +84,10 @@ export default {
     },
   },
 };
+
+//         <span> {{ cat.limit }} </span>
 </script>
 
 <style scoped>
-span {
-  display: inline-block;
-  vertical-align: middle;
-}
-.card-title {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.remove-button {
-  position: absolute;
-  font-size: 110%;
-  top: 0;
-  color: darkred;
-  right: 10px;
-  display: block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-.edit-img {
-  max-width: 18px;
-  max-height: 18px;
-  position: absolute;
-  top: 2px;
-  right: 40px;
-  cursor: pointer;
-}
-.image-main {
-  max-width: 100%;
-  max-height: 100%;
-}
-.acc-cats {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+@import "@/assets/main.css";
 </style>
