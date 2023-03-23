@@ -35,10 +35,15 @@ firebase.initializeApp(firebaseConfig);
 // let db = firebase.firestore();
 // const analytics = getAnalytics(app);
 
-createApp(App)
-  .use(store)
-  .use(router)
-  // .use(analytics)
-  // .use(MessagePlugin)
-  .use(BootstrapVue3)
-  .mount("#app");
+let app;
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = createApp(App)
+      .use(store)
+      .use(router)
+      // .use(analytics)
+      // .use(MessagePlugin)
+      .use(BootstrapVue3)
+      .mount("#app");
+  }
+});

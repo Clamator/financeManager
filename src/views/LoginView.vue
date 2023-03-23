@@ -15,6 +15,7 @@
     </div>
     <div class="form-floating">
       <input
+        @input="isAuthFalse = false"
         v-model="this.password"
         type="password"
         class="form-control"
@@ -23,10 +24,15 @@
       />
       <br />
       <label for="floatingPassword">Password</label>
+      <div
+        v-show="isAuthFalse"
+        @input="isAuthFalse = false"
+        class="error-text my-2 text-danger"
+      >
+        Invalid email or password
+      </div>
     </div>
-    <div v-show="isAuthFalse" class="error-text my-2">
-      Email or password invalid
-    </div>
+
     <div class="checkbox mb-3">
       <label> <input type="checkbox" value="remember-me" /> Remember me </label>
     </div>
