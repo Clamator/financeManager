@@ -67,7 +67,6 @@ export default {
         this.$router.push("/");
       } catch (e) {
         this.isAuthFalse = true;
-        console.log(e);
       }
     },
   },
