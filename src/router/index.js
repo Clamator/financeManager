@@ -35,13 +35,13 @@ const routes = [
   {
     path: "/auth",
     name: "auth",
-    meta: { layout: "empty" },
+    meta: { layout: "auth" },
     component: () => import("../views/LoginView"),
   },
   {
     path: "/reg",
     name: "reg",
-    meta: { layout: "empty" },
+    meta: { layout: "auth" },
     component: () => import("../views/RegistrationView"),
   },
   {
