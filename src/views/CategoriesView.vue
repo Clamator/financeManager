@@ -77,7 +77,6 @@ export default {
       this.limit = "";
     },
     deleteCategory(event) {
-      console.log("ppc");
       const target = event.target.parentNode.innerText.split("\n")[0];
       store.commit("DELETE_CHOSEN_CATEGORY", {
         catName: target,

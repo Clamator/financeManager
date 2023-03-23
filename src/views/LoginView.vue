@@ -24,7 +24,9 @@
       <br />
       <label for="floatingPassword">Password</label>
     </div>
-
+    <div v-show="isAuthFalse" class="error-text my-2">
+      Email or password invalid
+    </div>
     <div class="checkbox mb-3">
       <label> <input type="checkbox" value="remember-me" /> Remember me </label>
     </div>
@@ -44,6 +46,7 @@ export default {
     return {
       email: "",
       password: "",
+      isAuthFalse: false,
     };
   },
   methods: {
@@ -59,8 +62,13 @@ export default {
           return;
         }
       }
-      await store.dispatch("login", formData);
-      this.$router.push("/");
+      try {
+        await store.dispatch("login", formData);
+        this.$router.push("/");
+      } catch (e) {
+        this.isAuthFalse = true;
+        console.log(e);
+      }
     },
   },
 };
