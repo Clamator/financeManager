@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import auth from "./auth";
 
 const store = createStore({
   state: {
@@ -61,6 +62,8 @@ const store = createStore({
     },
   },
   actions: {},
-  modules: {},
+  modules: {
+    auth,
+  },
 });
 export default store;

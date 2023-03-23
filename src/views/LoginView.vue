@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="authUser">
+  <form @submit.prevent="authUser" class="needs-validation" novalidate>
     <h1 class="h3 mb-3 fw-normal">Please log in</h1>
 
     <div class="form-floating">
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import store from "@/store";
 export default {
   name: "LogIn",
   data() {
@@ -46,8 +47,20 @@ export default {
     };
   },
   methods: {
-    authUser() {
+    async authUser() {
       console.log("user authorized");
+      const formData = {
+        email: this.email,
+        password: this.password,
+      };
+      for (let el of Array.from(Object.entries(formData))) {
+        if (el[1] === "") {
+          alert("Enter correct data");
+          return;
+        }
+      }
+      await store.dispatch("login", formData);
+      this.$router.push("/");
     },
   },
 };

@@ -121,8 +121,20 @@
           id="personalGender"
         />
       </div>
-
-      <button type="submit" class="btn btn-primary">Let's start!</button>
+      <div class="checkbox mb-3">
+        <label>
+          <input
+            type="checkbox"
+            value="agree-with-terms"
+            v-model="agreeWithTerms"
+          />
+          I agree with terms
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary me-3">Let's start!</button>
+      <router-link class="btn btn-outline-success" to="/auth"
+        >Log in</router-link
+      >
     </div>
   </form>
 </template>
@@ -141,14 +153,36 @@ export default {
       isSimilar: true,
       gender: "",
       customGender: "",
+      agreeWithTerms: false,
     };
   },
+
   methods: {
     isPasswordsSimilar() {
       this.isSimilar = this.password === this.passwordAgain;
     },
     registerUser() {
+      if (!this.agreeWithTerms || !this.isSimilar) return;
+
       console.log("user is registered ");
+      const formData = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        nickName: this.nickName,
+        email: this.email,
+        password: this.password,
+        gender: this.gender,
+        customGender: this.customGender,
+        agreeWithTerms: this.agreeWithTerms,
+      };
+      for (let el of Array.from(Object.entries(formData))) {
+        if (el[1] === "") {
+          alert("Enter correct data");
+          return;
+        }
+      }
+      console.log(formData);
+      this.$router.push("/");
     },
     getOtherGender() {
       // let otherGender = document.querySelector(".other-gender");
