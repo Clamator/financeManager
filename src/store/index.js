@@ -3,6 +3,7 @@ import auth from "./auth";
 
 const store = createStore({
   state: {
+    userData: {},
     accounts: {},
     categories: {},
     currency: {
@@ -18,6 +19,8 @@ const store = createStore({
   getters: {
     allCategories: (state) => Object.values(state.categories),
     allAccounts: (state) => Object.values(state.accounts),
+    // userData: (state) => state.userData,
+    userData: (state) => state.userData,
   },
   mutations: {
     ADD_CURRENCY(state, { name, money, currency }) {
@@ -40,6 +43,8 @@ const store = createStore({
     GET_ACCS_FROM_LOCAL_STORAGE(state) {
       state.accounts = JSON.parse(localStorage.getItem("accounts"));
       state.categories = JSON.parse(localStorage.getItem("categories"));
+      state.userData = JSON.parse(localStorage.getItem("userData"));
+      console.log(state.userData);
     },
     ADD_CATEGORY(state, catName) {
       console.log(catName);

@@ -1,11 +1,20 @@
 import firebase from "firebase/compat/app";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, child, get } from "firebase/database";
 
 export default {
+  mutations: {
+    setUserData(state, userData) {
+      // state.userData = Object.assign({}, userData);
+      localStorage.setItem("userData", JSON.stringify(userData));
+      // state.userData = userData;
+    },
+  },
   actions: {
-    async login({ dispatch, commit }, { email, password }) {
-      console.log(dispatch, commit);
+    async login(context, { email, password }) {
       await firebase.auth().signInWithEmailAndPassword(email, password);
+      const userData = await context.dispatch("getUserDataBase");
+      console.log(userData);
+      context.commit("setUserData", userData);
     },
     async logout() {
       await firebase.auth().signOut();
@@ -19,13 +28,15 @@ export default {
       const userId = await dispatch("getUid");
 
       await dispatch("writeFirstUserDataAfterRegistration", {
-        userId,
-        name,
-        email,
-        lastName,
-        nickName,
-        gender,
-        customGender,
+        user: {
+          userId,
+          name,
+          email,
+          lastName,
+          nickName,
+          gender,
+          customGender,
+        },
       });
     },
     async getUid() {
@@ -50,6 +61,25 @@ export default {
       } catch (error) {
         console.error("Error writing user data: ", error);
       }
+    },
+    async getUserDataBase({ dispatch }) {
+      let userId = await dispatch("getUid");
+      const dbRef = ref(getDatabase());
+      let data = await get(child(dbRef, `users/${userId}/info`))
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            // console.log(snapshot.val());
+            return snapshot.val();
+            // commit("setUserData", snapshot.val());
+          } else {
+            console.log("No data available");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      return data;
     },
   },
 };

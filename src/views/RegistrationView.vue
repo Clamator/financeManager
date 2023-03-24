@@ -163,29 +163,6 @@ export default {
     isPasswordsSimilar() {
       this.isSimilar = this.password === this.passwordAgain;
     },
-    // registerUser() {
-    //   if (!this.agreeWithTerms || !this.isSimilar) return;
-    //
-    //   console.log("user is registered ");
-    //   const formData = {
-    //     firstName: this.firstName,
-    //     lastName: this.lastName,
-    //     nickName: this.nickName,
-    //     email: this.email,
-    //     password: this.password,
-    //     gender: this.gender,
-    //     customGender: this.customGender,
-    //     agreeWithTerms: this.agreeWithTerms,
-    //   };
-    //   for (let el of Array.from(Object.entries(formData))) {
-    //     if (el[1] === "") {
-    //       alert("Enter correct data");
-    //       return;
-    //     }
-    //   }
-    //   console.log(formData);
-    //   this.$router.push("/");
-    // },
     async registerUser() {
       const formData = {
         email: this.email,

@@ -14,7 +14,9 @@
         height="30"
         class="rounded-circle"
       />
-      <span class="d-none d-sm-inline mx-1">Clamator</span>
+      <span ref="username" class="d-none d-sm-inline mx-1">
+        {{ userData.nickName }}
+      </span>
     </a>
     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
       <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -31,15 +33,17 @@
 
 <script>
 import store from "@/store";
-
+import { mapGetters } from "vuex";
 export default {
   name: "UserAccount",
+  computed: {
+    ...mapGetters(["userData"]),
+  },
   methods: {
     async logout() {
       console.log("logged out");
       await store.dispatch("logout");
       this.$router.push("/auth?message=logout");
-      // здесь можно реализовать отображение сообщений пользователю
     },
   },
 };

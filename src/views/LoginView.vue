@@ -69,8 +69,10 @@ export default {
       }
       try {
         await store.dispatch("login", formData);
+        console.log("logged in 1");
         this.$router.push("/");
       } catch (e) {
+        console.log("not logged in");
         this.isAuthFalse = true;
       }
     },
