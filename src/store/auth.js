@@ -10,7 +10,10 @@ export default {
     async logout() {
       await firebase.auth().signOut();
     },
-    async registerNewUser({ dispatch }, { email, password, name }) {
+    async registerNewUser(
+      { dispatch },
+      { email, password, name, lastName, nickName, gender, customGender }
+    ) {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
       await firebase.auth().signInWithEmailAndPassword(email, password);
       const userId = await dispatch("getUid");
@@ -19,6 +22,10 @@ export default {
         userId,
         name,
         email,
+        lastName,
+        nickName,
+        gender,
+        customGender,
       });
     },
     async getUid() {
@@ -27,7 +34,7 @@ export default {
     },
     async writeFirstUserDataAfterRegistration(
       { dispatch },
-      { userId, name, email }
+      { userId, name, email, lastName, nickName, gender, customGender }
     ) {
       console.log(dispatch);
       const db = getDatabase();
@@ -35,6 +42,10 @@ export default {
         await set(ref(db, `users/${userId}/info`), {
           name: name,
           email: email,
+          lastName,
+          nickName,
+          gender,
+          customGender,
         });
       } catch (error) {
         console.error("Error writing user data: ", error);

@@ -191,6 +191,10 @@ export default {
         email: this.email,
         password: this.password,
         name: this.firstName,
+        lastName: this.lastName,
+        nickName: this.nickName,
+        gender: this.gender,
+        customGender: this.customGender,
       };
 
       try {
