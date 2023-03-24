@@ -38,13 +38,13 @@ const store = createStore({
       if (state.accounts && state.categories) {
         localStorage.setItem("accounts", JSON.stringify(state.accounts));
         localStorage.setItem("categories", JSON.stringify(state.categories));
+        // localStorage.setItem("userData", JSON.stringify(state.userData));
       }
     },
     GET_ACCS_FROM_LOCAL_STORAGE(state) {
       state.accounts = JSON.parse(localStorage.getItem("accounts"));
       state.categories = JSON.parse(localStorage.getItem("categories"));
       state.userData = JSON.parse(localStorage.getItem("userData"));
-      console.log(state.userData);
     },
     ADD_CATEGORY(state, catName) {
       console.log(catName);

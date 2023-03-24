@@ -5,6 +5,7 @@ export default {
   mutations: {
     setUserData(state, userData) {
       // state.userData = Object.assign({}, userData);
+      localStorage.removeItem("userData");
       localStorage.setItem("userData", JSON.stringify(userData));
     },
   },
