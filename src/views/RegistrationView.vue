@@ -1,5 +1,5 @@
 <template>
-  <form novalidate @submit.prevent="registerUser">
+  <form @submit.prevent="registerUser" novalidate>
     <h1 class="h3 mb-3 fw-normal">Registration</h1>
     <div id="main-wrapper">
       <div class="row">
@@ -140,6 +140,8 @@
 </template>
 
 <script>
+import store from "@/store";
+
 export default {
   name: "RegistrationView",
   data() {
@@ -161,28 +163,42 @@ export default {
     isPasswordsSimilar() {
       this.isSimilar = this.password === this.passwordAgain;
     },
-    registerUser() {
-      if (!this.agreeWithTerms || !this.isSimilar) return;
-
-      console.log("user is registered ");
+    // registerUser() {
+    //   if (!this.agreeWithTerms || !this.isSimilar) return;
+    //
+    //   console.log("user is registered ");
+    //   const formData = {
+    //     firstName: this.firstName,
+    //     lastName: this.lastName,
+    //     nickName: this.nickName,
+    //     email: this.email,
+    //     password: this.password,
+    //     gender: this.gender,
+    //     customGender: this.customGender,
+    //     agreeWithTerms: this.agreeWithTerms,
+    //   };
+    //   for (let el of Array.from(Object.entries(formData))) {
+    //     if (el[1] === "") {
+    //       alert("Enter correct data");
+    //       return;
+    //     }
+    //   }
+    //   console.log(formData);
+    //   this.$router.push("/");
+    // },
+    async registerUser() {
       const formData = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        nickName: this.nickName,
         email: this.email,
         password: this.password,
-        gender: this.gender,
-        customGender: this.customGender,
-        agreeWithTerms: this.agreeWithTerms,
+        name: this.firstName,
       };
-      for (let el of Array.from(Object.entries(formData))) {
-        if (el[1] === "") {
-          alert("Enter correct data");
-          return;
-        }
+
+      try {
+        await store.dispatch("registerNewUser", formData);
+        this.$router.push("/categories");
+      } catch (e) {
+        this.isAuthFalse = true;
       }
-      console.log(formData);
-      this.$router.push("/");
     },
     getOtherGender() {
       // let otherGender = document.querySelector(".other-gender");

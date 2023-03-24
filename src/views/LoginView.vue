@@ -57,7 +57,6 @@ export default {
   },
   methods: {
     async authUser() {
-      console.log("user authorized");
       const formData = {
         email: this.email,
         password: this.password,

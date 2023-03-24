@@ -30,11 +30,14 @@
 </template>
 
 <script>
+import store from "@/store";
+
 export default {
   name: "UserAccount",
   methods: {
-    logout() {
+    async logout() {
       console.log("logged out");
+      await store.dispatch("logout");
       this.$router.push("/auth?message=logout");
       // здесь можно реализовать отображение сообщений пользователю
     },
