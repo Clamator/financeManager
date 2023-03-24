@@ -194,8 +194,9 @@ export default {
       };
 
       try {
+        console.log("dispatch done");
+        this.$router.push("/");
         await store.dispatch("registerNewUser", formData);
-        this.$router.push("/categories");
       } catch (e) {
         this.isAuthFalse = true;
       }
