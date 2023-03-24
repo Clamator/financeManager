@@ -1,4 +1,5 @@
 import firebase from "firebase/compat/app";
+import { getDatabase, ref, set } from "firebase/database";
 
 export default {
   actions: {
@@ -9,18 +10,35 @@ export default {
     async logout() {
       await firebase.auth().signOut();
     },
-    // need to send unique user id
     async registerNewUser({ dispatch }, { email, password, name }) {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
-      const userId = await dispatch("getUserId");
-      await firebase.database().ref(`/users/${userId}/info`).set({
-        name: name,
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+      const userId = await dispatch("getUid");
+
+      await dispatch("writeFirstUserDataAfterRegistration", {
+        userId,
+        name,
+        email,
       });
     },
-    // this func gets unique user id
-    getUserId() {
-      const user = firebase.auth().currentUser;
+    async getUid() {
+      const user = await firebase.auth().currentUser;
       return user ? user.uid : null;
+    },
+    async writeFirstUserDataAfterRegistration(
+      { dispatch },
+      { userId, name, email }
+    ) {
+      console.log(dispatch);
+      const db = getDatabase();
+      try {
+        await set(ref(db, `users/${userId}/info`), {
+          name: name,
+          email: email,
+        });
+      } catch (error) {
+        console.error("Error writing user data: ", error);
+      }
     },
   },
 };

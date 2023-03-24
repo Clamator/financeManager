@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="registerUser" novalidate>
+  <form @submit.prevent="registerUser">
     <h1 class="h3 mb-3 fw-normal">Registration</h1>
     <div id="main-wrapper">
       <div class="row">
