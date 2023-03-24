@@ -6,7 +6,6 @@ export default {
     setUserData(state, userData) {
       // state.userData = Object.assign({}, userData);
       localStorage.setItem("userData", JSON.stringify(userData));
-      // state.userData = userData;
     },
   },
   actions: {
@@ -28,15 +27,13 @@ export default {
       const userId = await dispatch("getUid");
 
       await dispatch("writeFirstUserDataAfterRegistration", {
-        user: {
-          userId,
-          name,
-          email,
-          lastName,
-          nickName,
-          gender,
-          customGender,
-        },
+        userId: userId,
+        name: name,
+        email: email,
+        lastName: lastName,
+        nickName: nickName,
+        gender: gender,
+        customGender: customGender,
       });
     },
     async getUid() {
@@ -50,6 +47,7 @@ export default {
       console.log(dispatch);
       const db = getDatabase();
       try {
+        console.log("start write");
         await set(ref(db, `users/${userId}/info`), {
           name: name,
           email: email,
@@ -64,6 +62,8 @@ export default {
     },
     async getUserDataBase({ dispatch }) {
       let userId = await dispatch("getUid");
+      // ключ есть
+      console.log(userId);
       const dbRef = ref(getDatabase());
       let data = await get(child(dbRef, `users/${userId}/info`))
         .then((snapshot) => {
