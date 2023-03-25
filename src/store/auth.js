@@ -4,9 +4,14 @@ import { getDatabase, ref, set, child, get } from "firebase/database";
 export default {
   mutations: {
     setUserData(state, userData) {
-      // state.userData = Object.assign({}, userData);
-      localStorage.removeItem("userData");
+      // console.log(userData);
+      // state.userData = userData;
+      // console.log(state.userData);
+      // localStorage.removeItem("userData");
       localStorage.setItem("userData", JSON.stringify(userData));
+    },
+    clearUserData(state) {
+      state.userData = {};
     },
   },
   actions: {
@@ -15,9 +20,11 @@ export default {
       const userData = await context.dispatch("getUserDataBase");
       console.log(userData);
       context.commit("setUserData", userData);
+      context.commit("GET_ACCS_FROM_LOCAL_STORAGE");
     },
-    async logout() {
+    async logout({ commit }) {
       await firebase.auth().signOut();
+      commit("clearUserData");
     },
     async registerNewUser(
       { dispatch },

@@ -11,6 +11,19 @@ import AuthLayout from "@/layouts/AuthLayout";
 import MainLayout from "@/layouts/MainLayout";
 export default {
   name: "App",
+  data() {
+    return {
+      user: {
+        userId: "",
+        name: "",
+        email: "",
+        lastName: "",
+        nickName: "",
+        gender: "",
+        customGender: "",
+      },
+    };
+  },
   components: {
     AuthLayout,
     MainLayout,
@@ -24,8 +37,10 @@ export default {
     if (!localStorage.getItem("categories")) {
       localStorage.setItem("categories", JSON.stringify({}));
     }
+    if (!localStorage.getItem("userData")) {
+      localStorage.setItem("userData", JSON.stringify(this.user));
+    }
     store.commit("GET_ACCS_FROM_LOCAL_STORAGE");
-    // createDB();
   },
 };
 </script>

@@ -38,7 +38,7 @@ const store = createStore({
       if (state.accounts && state.categories) {
         localStorage.setItem("accounts", JSON.stringify(state.accounts));
         localStorage.setItem("categories", JSON.stringify(state.categories));
-        // localStorage.setItem("userData", JSON.stringify(state.userData));
+        localStorage.setItem("userData", JSON.stringify(state.userData));
       }
     },
     GET_ACCS_FROM_LOCAL_STORAGE(state) {
