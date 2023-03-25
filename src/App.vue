@@ -9,6 +9,8 @@
 import store from "@/store";
 import AuthLayout from "@/layouts/AuthLayout";
 import MainLayout from "@/layouts/MainLayout";
+import firebase from "firebase/compat/app";
+
 export default {
   name: "App",
   data() {
@@ -34,6 +36,10 @@ export default {
     },
   },
   created() {
+    if (!firebase.auth().currentUser) {
+      console.log(firebase.auth().currentUser);
+      this.$router.push("/auth");
+    }
     if (!localStorage.getItem("categories")) {
       localStorage.setItem("categories", JSON.stringify({}));
     }

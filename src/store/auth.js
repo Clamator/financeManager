@@ -4,10 +4,6 @@ import { getDatabase, ref, set, child, get } from "firebase/database";
 export default {
   mutations: {
     setUserData(state, userData) {
-      // console.log(userData);
-      // state.userData = userData;
-      // console.log(state.userData);
-      // localStorage.removeItem("userData");
       localStorage.setItem("userData", JSON.stringify(userData));
     },
     clearUserData(state) {
@@ -18,7 +14,6 @@ export default {
     async login(context, { email, password }) {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       const userData = await context.dispatch("getUserDataBase");
-      console.log(userData);
       context.commit("setUserData", userData);
       context.commit("GET_ACCS_FROM_LOCAL_STORAGE");
     },
@@ -70,8 +65,6 @@ export default {
     },
     async getUserDataBase({ dispatch }) {
       let userId = await dispatch("getUid");
-      // ключ есть
-      console.log(userId);
       const dbRef = ref(getDatabase());
       let data = await get(child(dbRef, `users/${userId}/info`))
         .then((snapshot) => {
