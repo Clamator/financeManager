@@ -2,19 +2,19 @@
   <div
     v-show="true"
     class="modal fade"
-    ref="myModal"
-    id="staticBackdrop"
+    ref="myModal2"
+    id="editCategory"
     data-bs-backdrop="static"
-    data-bs-keyboard="false"
+    data-bs-keyboard="true"
     tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
+    aria-labelledby="editCategoryLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">
-            You are about to add new Account
+          <h5 class="modal-title" id="editCategoryLabel">
+            You are about to edit category {{ editCat }}
           </h5>
           <button
             type="button"
@@ -27,7 +27,8 @@
           <div class="input-group mb-3">
             <input
               type="text"
-              placeholder="Account name"
+              v-model="newCategoryName"
+              placeholder="New category name"
               class="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
@@ -36,18 +37,12 @@
 
           <div class="input-group">
             <input
+              v-model="newCategoryLimit"
               type="text"
               class="form-control"
-              placeholder="Enter an amount of money"
+              placeholder="Enter new limit"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select class="form-select" aria-label="Default select">
-              <!--              <option selected>Choose currency</option>-->
-              <option selected value="$">$</option>
-              <option value="€">€</option>
-              <option value="₽">₽</option>
-              <option value="₸">₸</option>
-            </select>
           </div>
         </div>
         <div class="modal-footer">
@@ -56,16 +51,16 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
           >
-            Cancel adding
+            Cancel editing
           </button>
           <button
-            @click="addCurrency"
+            @click="editCategory"
             type="button"
             class="btn btn-primary btn-success"
             data-bs-dismiss="modal"
             aria-label="Close"
           >
-            Add account!
+            Edit!
           </button>
         </div>
       </div>
@@ -79,10 +74,13 @@ export default {
   data() {
     return {
       isEditCatPopupOpen: false,
+      newCategoryName: "",
+      newCategoryLimit: null,
     };
   },
+
   methods: {
-    addCurrency() {
+    editCategory() {
       this.isEditCatPopupOpen = this.isEditCatPopupOpen === false;
     },
   },

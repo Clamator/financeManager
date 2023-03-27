@@ -9,7 +9,7 @@
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
+        data-bs-target="#addAccBackdrop"
         @click="isAddAccPopupOpen = true"
       >
         Add account

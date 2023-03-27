@@ -14,13 +14,19 @@
           {{ cat.catSpent }} / {{ cat.catLimit }}
         </span>
       </div>
-      <div @click="editCategory" class="edit-img">
+      <button
+        type="button"
+        class="btn btn-primary edit-img"
+        data-bs-toggle="modal"
+        @click="editCategory"
+        data-bs-target="#editCategory"
+      >
         <img
           class="image-main"
           src="https://cdn-icons-png.flaticon.com/512/259/259450.png"
           alt=""
         />
-      </div>
+      </button>
       <button @click="deleteCategory($event)" class="remove-button">x</button>
     </div>
 
@@ -50,12 +56,15 @@
 import store from "@/store";
 export default {
   name: "CategoriesView",
+  components: {},
   data() {
     return {
       category: "",
       categoryToDelete: "",
       spentMoney: 0,
       limit: null,
+      isEditCatPopupOpen: false,
+      editingCat: "",
     };
   },
   computed: {
@@ -67,8 +76,10 @@ export default {
     store.state.categoriesAll = await this.$store.dispatch("getAllCategories");
   },
   methods: {
-    editCategory() {
-      alert("Edit me");
+    editCategory(event) {
+      this.isEditCatPopupOpen = true;
+      this.editingCat = event.target.parentNode.innerText.split("\n")[0];
+      console.log(this.editingCat);
     },
     async addCategory() {
       if (this.category !== "" && this.limit !== "") {
@@ -91,7 +102,7 @@ export default {
     },
     deleteCategory(event) {
       const target = event.target.parentNode.innerText.split("\n")[0];
-      console.log(event.target.parentNode.innerText.split("\n")[0]);
+
       store.commit("DELETE_CHOSEN_CATEGORY", {
         catName: target,
       });

@@ -2,18 +2,18 @@
   <div
     v-show="true"
     class="modal fade"
-    ref="myModal"
-    id="staticBackdrop"
+    ref="addAccModal"
+    id="addAccBackdrop"
     data-bs-backdrop="static"
-    data-bs-keyboard="false"
+    data-bs-keyboard="true"
     tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
+    aria-labelledby="addAccBackdropLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">
+          <h5 class="modal-title" id="addAccBackdropLabel">
             You are about to add new Account
           </h5>
           <button
