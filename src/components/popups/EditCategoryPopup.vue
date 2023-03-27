@@ -26,7 +26,6 @@
         <div class="modal-body">
           <div class="input-group mb-3">
             <input
-              v-model="accName"
               type="text"
               placeholder="Account name"
               class="form-control"
@@ -37,17 +36,13 @@
 
           <div class="input-group">
             <input
-              v-model="moneyAmount"
               type="text"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select
-              v-model="currency"
-              class="form-select"
-              aria-label="Default select"
-            >
+            <select class="form-select" aria-label="Default select">
+              <!--              <option selected>Choose currency</option>-->
               <option selected value="$">$</option>
               <option value="€">€</option>
               <option value="₽">₽</option>
@@ -79,29 +74,16 @@
 </template>
 
 <script>
-import store from "@/store";
 export default {
-  name: "AddAccountPopup",
+  name: "EditCategoryPopup",
   data() {
     return {
-      accName: "",
-      moneyAmount: "",
-      currency: "$",
-      isAddAccPopupOpen: false,
+      isEditCatPopupOpen: false,
     };
   },
   methods: {
     addCurrency() {
-      if (this.accName !== "" && this.moneyAmount !== "") {
-        store.commit("ADD_CURRENCY", {
-          name: this.accName,
-          money: this.moneyAmount,
-          currency: this.currency,
-        });
-        this.isAddAccPopupOpen = this.isAddAccPopupOpen === false;
-      } else {
-        alert("Enter data!!!");
-      }
+      this.isEditCatPopupOpen = this.isEditCatPopupOpen === false;
     },
   },
 };

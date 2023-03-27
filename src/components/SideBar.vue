@@ -23,10 +23,6 @@
 
         <transaction-area></transaction-area>
         <categories-area></categories-area>
-
-        <router-link class="btn btn-outline-success" to="/auth"
-          >Sign up / Log in</router-link
-        >
       </ul>
       <hr />
       <user-account></user-account>

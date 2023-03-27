@@ -11,10 +11,10 @@
           {{ cat.catName }}
         </span>
         <span class="card-text fw-bold fs-4 text-white">
-          {{ cat.catLimit }}
+          {{ cat.catSpent }} / {{ cat.catLimit }}
         </span>
       </div>
-      <div class="edit-img">
+      <div @click="editCategory" class="edit-img">
         <img
           class="image-main"
           src="https://cdn-icons-png.flaticon.com/512/259/259450.png"
@@ -33,7 +33,7 @@
           type="text"
         />
         <input
-          v-model="this.limit"
+          v-model.number="this.limit"
           placeholder="Enter category limit"
           class="my-3 rounded ps-2 border-1 bg-opacity-75"
           type="text"
@@ -52,9 +52,9 @@ export default {
   name: "CategoriesView",
   data() {
     return {
-      categories: store.state.categories,
       category: "",
       categoryToDelete: "",
+      spentMoney: 0,
       limit: null,
     };
   },
@@ -63,21 +63,35 @@ export default {
       return store.getters.allCategories;
     },
   },
+  async mounted() {
+    store.state.categoriesAll = await this.$store.dispatch("getAllCategories");
+  },
   methods: {
-    addCategory() {
+    editCategory() {
+      alert("Edit me");
+    },
+    async addCategory() {
       if (this.category !== "" && this.limit !== "") {
-        store.commit("ADD_CATEGORY", {
+        const cat = await store.dispatch("upload_category", {
           catName: this.category,
-          catLimit: +this.limit,
+          catSpent: this.spentMoney,
+          catLimit: this.limit,
         });
+        store.state.categoriesAll = {
+          ...store.state.categoriesAll,
+          cat,
+        };
+        store.commit("ADD_ACCS_TO_LOCAL_STORAGE");
       } else {
         alert("Enter data!!!");
       }
       this.category = "";
+      this.spentMoney = 0;
       this.limit = "";
     },
     deleteCategory(event) {
       const target = event.target.parentNode.innerText.split("\n")[0];
+      console.log(event.target.parentNode.innerText.split("\n")[0]);
       store.commit("DELETE_CHOSEN_CATEGORY", {
         catName: target,
       });

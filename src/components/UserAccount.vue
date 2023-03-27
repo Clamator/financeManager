@@ -36,11 +36,6 @@ import store from "@/store";
 import { mapGetters } from "vuex";
 export default {
   name: "UserAccount",
-  // computed: {
-  //   userData() {
-  //     return store.getters.userData;
-  //   },
-  // },
   computed: {
     ...mapGetters(["userData"]),
   },

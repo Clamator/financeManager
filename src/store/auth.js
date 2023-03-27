@@ -14,6 +14,7 @@ export default {
     async login(context, { email, password }) {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       const userData = await context.dispatch("getUserDataBase");
+      // this.$store.state.categories = await context.dispatch("getAllCategories");
       context.commit("setUserData", userData);
       context.commit("GET_ACCS_FROM_LOCAL_STORAGE");
     },

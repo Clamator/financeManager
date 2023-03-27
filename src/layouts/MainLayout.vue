@@ -8,6 +8,7 @@
             <router-view />
           </div>
           <add-account-popup></add-account-popup>
+          <edit-category-popup></edit-category-popup>
         </div>
       </div>
     </div>
@@ -17,12 +18,13 @@
 <script>
 import SideBar from "@/components/SideBar";
 import AddAccountPopup from "@/components/popups/AddAccountPopup";
+import EditCategoryPopup from "@/components/popups/EditCategoryPopup";
 export default {
   name: "MainLayout",
   components: {
     SideBar,
     AddAccountPopup,
-    // MainWindow,
+    EditCategoryPopup,
   },
 };
 </script>

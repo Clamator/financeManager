@@ -24,7 +24,7 @@ const routes = [
     path: "/:pathMatch(.*)*",
     name: "notFound",
     meta: { layout: "main" },
-    component: () => import("../components/NotFound.vue"),
+    component: () => import("../views/NotFound.vue"),
   },
   {
     path: "/categories",
