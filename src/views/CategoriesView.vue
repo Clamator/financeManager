@@ -78,7 +78,8 @@ export default {
   methods: {
     editCategory(event) {
       this.isEditCatPopupOpen = true;
-      this.editingCat = event.target.parentNode.innerText.split("\n")[0];
+      store.state.accToEdit = event.target.parentNode.innerText.split("\n")[0];
+      // this.editingCat = event.target.parentNode.innerText.split("\n")[0];
       console.log(this.editingCat);
     },
     async addCategory() {

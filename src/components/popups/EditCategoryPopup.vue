@@ -14,7 +14,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="editCategoryLabel">
-            You are about to edit category {{ editCat }}
+            You are about to edit category: {{ this.$store.state.accToEdit }}
           </h5>
           <button
             type="button"
@@ -69,6 +69,7 @@
 </template>
 
 <script>
+// import store from "@/store";
 export default {
   name: "EditCategoryPopup",
   data() {
@@ -78,7 +79,6 @@ export default {
       newCategoryLimit: null,
     };
   },
-
   methods: {
     editCategory() {
       this.isEditCatPopupOpen = this.isEditCatPopupOpen === false;

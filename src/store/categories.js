@@ -1,6 +1,9 @@
 import { getDatabase, ref, push, remove, get, child } from "firebase/database";
 
 export default {
+  state: {
+    accToEdit: "",
+  },
   actions: {
     async upload_category(context, { catName, catSpent, catLimit }) {
       try {
