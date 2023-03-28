@@ -1,9 +1,10 @@
 import firebase from "firebase/compat/app";
 import { getDatabase, ref, set, child, get } from "firebase/database";
-
+import store from "@/store/index";
 export default {
   mutations: {
     setUserData(state, userData) {
+      console.log(userData, 111);
       localStorage.setItem("userData", JSON.stringify(userData));
     },
     clearUserData(state) {
@@ -15,7 +16,8 @@ export default {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       const userData = await context.dispatch("getUserDataBase");
       // this.$store.state.categories = await context.dispatch("getAllCategories");
-      context.commit("setUserData", userData);
+      store.state.userData = await userData;
+      // context.commit("setUserData", userData);
       context.commit("GET_ACCS_FROM_LOCAL_STORAGE");
     },
     async logout({ commit }) {
@@ -24,7 +26,7 @@ export default {
     },
     async registerNewUser(
       { dispatch },
-      { email, password, name, lastName, nickName, gender, customGender }
+      { email, password, name, lastName, nickName, gender, customGender, bill }
     ) {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
       await firebase.auth().signInWithEmailAndPassword(email, password);
@@ -38,6 +40,7 @@ export default {
         nickName: nickName,
         gender: gender,
         customGender: customGender,
+        bill: bill,
       });
     },
     async getUid() {
@@ -46,7 +49,7 @@ export default {
     },
     async writeFirstUserDataAfterRegistration(
       { dispatch },
-      { userId, name, email, lastName, nickName, gender, customGender }
+      { userId, name, email, lastName, nickName, gender, customGender, bill }
     ) {
       console.log(dispatch);
       const db = getDatabase();
@@ -59,6 +62,7 @@ export default {
           nickName,
           gender,
           customGender,
+          bill,
         });
       } catch (error) {
         console.error("Error writing user data: ", error);

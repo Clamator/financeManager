@@ -156,6 +156,7 @@ export default {
       gender: "",
       customGender: "",
       agreeWithTerms: false,
+      bill: 10000,
     };
   },
 
@@ -172,6 +173,7 @@ export default {
         nickName: this.nickName,
         gender: this.gender,
         customGender: this.customGender,
+        bill: this.bill,
       };
 
       try {

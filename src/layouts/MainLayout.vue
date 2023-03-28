@@ -9,6 +9,8 @@
           </div>
           <add-account-popup></add-account-popup>
           <edit-category-popup></edit-category-popup>
+          <withdraw-popup></withdraw-popup>
+          <refill-popup></refill-popup>
         </div>
       </div>
     </div>
@@ -19,12 +21,17 @@
 import SideBar from "@/components/SideBar";
 import AddAccountPopup from "@/components/popups/AddAccountPopup";
 import EditCategoryPopup from "@/components/popups/EditCategoryPopup";
+import WithdrawPopup from "@/components/popups/WithdrawPopup";
+import RefillPopup from "@/components/popups/RefillPopup";
+
 export default {
   name: "MainLayout",
   components: {
     SideBar,
     AddAccountPopup,
     EditCategoryPopup,
+    WithdrawPopup,
+    RefillPopup,
   },
 };
 </script>

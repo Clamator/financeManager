@@ -2,20 +2,18 @@
   <div
     v-show="true"
     class="modal fade"
-    ref="addAccModal"
-    id="addAccBackdrop"
+    ref="refill"
+    id="refillBackdrop"
     data-bs-backdrop="static"
     data-bs-keyboard="true"
     tabindex="-1"
-    aria-labelledby="addAccBackdropLabel"
+    aria-labelledby="refillBackdropLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="addAccBackdropLabel">
-            You are about to add new Account
-          </h5>
+          <h5 class="modal-title" id="refillBackdropLabel">Income</h5>
           <button
             type="button"
             class="btn-close"
@@ -26,7 +24,6 @@
         <div class="modal-body">
           <div class="input-group mb-3">
             <input
-              v-model="accName"
               type="text"
               placeholder="Account name"
               class="form-control"
@@ -37,17 +34,12 @@
 
           <div class="input-group">
             <input
-              v-model="moneyAmount"
               type="text"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select
-              v-model="currency"
-              class="form-select"
-              aria-label="Default select"
-            >
+            <select class="form-select" aria-label="Default select">
               <option selected value="$">$</option>
               <option value="€">€</option>
               <option value="₽">₽</option>
@@ -61,16 +53,16 @@
             class="btn btn-secondary"
             data-bs-dismiss="modal"
           >
-            Cancel adding
+            Cancel
           </button>
           <button
-            @click="addCurrency"
+            @click="refillWallet"
             type="button"
             class="btn btn-primary btn-success"
             data-bs-dismiss="modal"
             aria-label="Close"
           >
-            Add account!
+            Refill the wallet!
           </button>
         </div>
       </div>
@@ -79,31 +71,16 @@
 </template>
 
 <script>
-import store from "@/store";
 export default {
-  name: "AddAccountPopup",
+  name: "RefillPopup",
   data() {
     return {
-      accName: "",
-      moneyAmount: "",
-      currency: "$",
-      isAddAccPopupOpen: false,
+      isRefillPopupOpen: false,
     };
   },
   methods: {
-    addCurrency() {
-      if (this.accName !== "" && this.moneyAmount !== "") {
-        store.commit("ADD_CURRENCY", {
-          name: this.accName,
-          money: this.moneyAmount,
-          currency: this.currency,
-        });
-        this.isAddAccPopupOpen = this.isAddAccPopupOpen === false;
-        this.accName = "";
-        this.moneyAmount = "";
-      } else {
-        alert("Enter data!!!");
-      }
+    refillWallet() {
+      this.isRefillPopupOpen = this.isRefillPopupOpen === false;
     },
   },
 };
