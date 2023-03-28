@@ -41,10 +41,9 @@ export default {
   },
   methods: {
     async logout() {
-      console.log("logged out");
       await store.dispatch("logout");
       this.$router.push("/auth?message=logout");
-      localStorage.removeItem("userData");
+      store.commit("DELETE_AFTER_LOGOUT");
     },
   },
 };

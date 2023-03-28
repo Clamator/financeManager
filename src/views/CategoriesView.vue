@@ -21,11 +21,12 @@
         @click="editCategory"
         data-bs-target="#editCategory"
       >
-        <img
-          class="image-main"
-          src="https://cdn-icons-png.flaticon.com/512/259/259450.png"
-          alt=""
-        />
+        Edit
+        <!--        <img-->
+        <!--          class="image-main"-->
+        <!--          src="https://cdn-icons-png.flaticon.com/512/259/259450.png"-->
+        <!--          alt=""-->
+        <!--        />-->
       </button>
       <button @click="deleteCategory($event)" class="remove-button">x</button>
     </div>
@@ -75,7 +76,8 @@ export default {
     },
   },
   async mounted() {
-    store.state.categoriesAll = await this.$store.dispatch("getAllCategories");
+    store.state.categoriesAll =
+      (await this.$store.dispatch("getAllCategories")) || {};
   },
   methods: {
     editCategory(event) {
@@ -117,5 +119,13 @@ export default {
 </script>
 
 <style scoped>
-@import "@/assets/main.css";
+/*@import "@/assets/main.css";*/
+.edit-img {
+  max-width: 60px;
+  max-height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+}
 </style>

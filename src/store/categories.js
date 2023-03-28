@@ -82,7 +82,7 @@ export default {
           console.error(error);
         });
       const cats = [];
-
+      if (!categoriesFetched) return;
       Object.keys(categoriesFetched).forEach((key) => {
         cats.push({
           catName: categoriesFetched[key].catName,

@@ -23,6 +23,10 @@ const store = createStore({
     userData: (state) => state.userData,
   },
   mutations: {
+    DELETE_AFTER_LOGOUT(state) {
+      state.categoriesAll = {};
+      localStorage.removeItem("userData");
+    },
     ADD_CURRENCY(state, { name, money, currency }) {
       state.accounts = {
         ...state.accounts,
