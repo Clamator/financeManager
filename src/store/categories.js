@@ -1,8 +1,29 @@
-import { getDatabase, ref, push, remove, get, child } from "firebase/database";
-
+import {
+  getDatabase,
+  ref,
+  push,
+  remove,
+  get,
+  child,
+  update,
+} from "firebase/database";
+import store from "@/store/index";
 export default {
   state: {
-    accToEdit: "",
+    accNameToEdit: "",
+    accFullToEdit: {},
+  },
+  mutations: {
+    updateCategory(state, { id, catSpent, catName, catLimit }) {
+      const category = store.state.categoriesAll.find((cat) => cat.id === id);
+      console.log(category);
+      if (category) {
+        category.catSpent = catSpent;
+        category.catName = catName;
+        category.catLimit = catLimit;
+        category.updatedAt = new Date();
+      }
+    },
   },
   actions: {
     async upload_category(context, { catName, catSpent, catLimit }) {
@@ -27,6 +48,21 @@ export default {
       } catch (e) {
         console.log(e);
       }
+    },
+    async editCategory(context, { id, catSpent, catName, catLimit }) {
+      const db = getDatabase();
+      const userId = await context.dispatch("getUid");
+
+      const updates = {
+        catSpent: catSpent,
+        catName: catName,
+        catLimit: catLimit,
+        updatedAt: new Date(),
+      };
+      //   await store.dispatch("getAllCategories");
+      const categoryPath = `users/${userId}/categories/${id}`;
+      await update(ref(db, categoryPath), updates);
+      context.commit("updateCategory", { id, catSpent, catName, catLimit });
     },
     async getAllCategories(context) {
       let userId = await context.dispatch("getUid");

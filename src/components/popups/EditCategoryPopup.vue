@@ -14,7 +14,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="editCategoryLabel">
-            You are about to edit category: {{ this.$store.state.accToEdit }}
+            You are about to edit category:
+            {{ this.$store.state.accNameToEdit }}
           </h5>
           <button
             type="button"
@@ -54,7 +55,7 @@
             Cancel editing
           </button>
           <button
-            @click="editCategory"
+            @click="editCategoryInsidePopup"
             type="button"
             class="btn btn-primary btn-success"
             data-bs-dismiss="modal"
@@ -69,7 +70,8 @@
 </template>
 
 <script>
-// import store from "@/store";
+import store from "@/store";
+
 export default {
   name: "EditCategoryPopup",
   data() {
@@ -80,7 +82,23 @@ export default {
     };
   },
   methods: {
-    editCategory() {
+    async editCategoryInsidePopup() {
+      if (this.newCategoryName === "" || this.newCategoryLimit === null) {
+        alert("Enter data!!!");
+        return;
+      }
+      try {
+        await store.dispatch("editCategory", {
+          id: store.state.accFullToEdit.id,
+          catSpent: store.state.accFullToEdit.catSpent,
+          catName: this.newCategoryName,
+          catLimit: this.newCategoryLimit,
+        });
+      } catch (e) {
+        console.log(e);
+      }
+      this.newCategoryName = "";
+      this.newCategoryLimit = null;
       this.isEditCatPopupOpen = this.isEditCatPopupOpen === false;
     },
   },

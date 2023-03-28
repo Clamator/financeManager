@@ -3,8 +3,8 @@
     <div
       class="card bg-opacity-75 bg-info"
       style="width: 18rem; min-height: 130px"
-      v-for="(cat, indx) in allCategories"
-      :key="indx"
+      v-for="cat in allCategories"
+      :key="cat.id"
     >
       <div class="card-body d-flex flex-column justify-content-sm-center">
         <span class="card-title fw-bold fs-4 text-white">
@@ -59,12 +59,14 @@ export default {
   components: {},
   data() {
     return {
+      current: null,
       category: "",
       categoryToDelete: "",
       spentMoney: 0,
       limit: null,
       isEditCatPopupOpen: false,
       editingCat: "",
+      categories: [],
     };
   },
   computed: {
@@ -78,9 +80,12 @@ export default {
   methods: {
     editCategory(event) {
       this.isEditCatPopupOpen = true;
-      store.state.accToEdit = event.target.parentNode.innerText.split("\n")[0];
-      // this.editingCat = event.target.parentNode.innerText.split("\n")[0];
-      console.log(this.editingCat);
+      store.state.accNameToEdit =
+        event.target.parentNode.innerText.split("\n")[0];
+      // сам объект для изменения
+      store.state.accFullToEdit = this.allCategories.find(
+        (cat) => cat.catName === store.state.accNameToEdit
+      );
     },
     async addCategory() {
       if (this.category !== "" && this.limit !== "") {
@@ -89,11 +94,11 @@ export default {
           catSpent: this.spentMoney,
           catLimit: this.limit,
         });
+        // добавляем категорию в state, оттуда идет отображение
         store.state.categoriesAll = {
           ...store.state.categoriesAll,
           cat,
         };
-        store.commit("ADD_ACCS_TO_LOCAL_STORAGE");
       } else {
         alert("Enter data!!!");
       }
@@ -103,15 +108,12 @@ export default {
     },
     deleteCategory(event) {
       const target = event.target.parentNode.innerText.split("\n")[0];
-
       store.commit("DELETE_CHOSEN_CATEGORY", {
         catName: target,
       });
     },
   },
 };
-
-//         <span> {{ cat.limit }} </span>
 </script>
 
 <style scoped>
