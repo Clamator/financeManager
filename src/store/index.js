@@ -41,12 +41,10 @@ const store = createStore({
     ADD_ACCS_TO_LOCAL_STORAGE(state) {
       if (state.accounts && state.categoriesAll) {
         localStorage.setItem("accounts", JSON.stringify(state.accounts));
-        // localStorage.setItem("userData", JSON.stringify(state.userData));
       }
     },
     GET_ACCS_FROM_LOCAL_STORAGE(state) {
       state.accounts = JSON.parse(localStorage.getItem("accounts"));
-      // state.userData = JSON.parse(localStorage.getItem("userData"));
     },
     DELETE_CHOSEN_CATEGORY(state, catName) {
       delete state.categoriesAll[catName.catName];

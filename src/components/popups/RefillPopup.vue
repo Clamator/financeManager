@@ -25,7 +25,7 @@
           <div class="input-group mb-3">
             <input
               type="text"
-              placeholder="Account name"
+              placeholder="Income source"
               class="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
@@ -39,12 +39,6 @@
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select class="form-select" aria-label="Default select">
-              <option selected value="$">$</option>
-              <option value="€">€</option>
-              <option value="₽">₽</option>
-              <option value="₸">₸</option>
-            </select>
           </div>
         </div>
         <div class="modal-footer">
@@ -76,6 +70,8 @@ export default {
   data() {
     return {
       isRefillPopupOpen: false,
+      incomeSource: "",
+      moneyAmount: null,
     };
   },
   methods: {

@@ -38,7 +38,7 @@
 
           <div class="input-group">
             <input
-              v-model="newCategoryLimit"
+              v-model.number="newCategoryLimit"
               type="text"
               class="form-control"
               placeholder="Enter new limit"

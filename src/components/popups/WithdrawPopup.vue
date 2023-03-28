@@ -41,11 +41,21 @@
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <select class="form-select" aria-label="Default select">
-              <option selected value="$">$</option>
-              <option value="€">€</option>
-              <option value="₽">₽</option>
-              <option value="₸">₸</option>
+            <!--            <label for="categorySelect">Choose category</label>-->
+            <select
+              v-if="allCategories.length > 0"
+              id="categorySelect"
+              v-model="chosenCategoryId"
+              class="form-select"
+              aria-label="categorySelect"
+            >
+              <option
+                v-for="cat in allCategories"
+                :key="cat.id"
+                :value="cat.id"
+              >
+                {{ cat.catName }}
+              </option>
             </select>
           </div>
         </div>
@@ -57,7 +67,17 @@
           >
             Cancel
           </button>
+          <p v-if="allCategories.length === 0">
+            No categories
+            <router-link
+              v-if="allCategories.length === 0"
+              class="btn btn-primary btn-success"
+              to="/categories"
+              >Add Category</router-link
+            >
+          </p>
           <button
+            v-if="allCategories.length > 0"
             @click="withdrawMoney"
             type="button"
             class="btn btn-primary btn-success"
@@ -73,20 +93,30 @@
 </template>
 
 <script>
-// import store from "@/store";
+import store from "@/store";
 
 export default {
   name: "WithdrawPopup",
+  computed: {
+    allCategories() {
+      return store.getters.allCategories;
+    },
+  },
+  async mounted() {
+    store.state.categoriesAll =
+      (await this.$store.dispatch("getAllCategories")) || {};
+  },
   data() {
     return {
+      chosenCategoryId: "",
       isWithdrawPopupOpen: false,
       expense: "",
       moneyWasted: null,
-      category: "",
     };
   },
   methods: {
     withdrawMoney() {
+      console.log(this.chosenCategoryId);
       this.isWithdrawPopupOpen = this.isWithdrawPopupOpen === false;
     },
   },

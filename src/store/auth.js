@@ -3,10 +3,6 @@ import { getDatabase, ref, set, child, get } from "firebase/database";
 import store from "@/store/index";
 export default {
   mutations: {
-    setUserData(state, userData) {
-      console.log(userData, 111);
-      localStorage.setItem("userData", JSON.stringify(userData));
-    },
     clearUserData(state) {
       state.userData = {};
     },
@@ -15,10 +11,7 @@ export default {
     async login(context, { email, password }) {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       const userData = await context.dispatch("getUserDataBase");
-      // this.$store.state.categories = await context.dispatch("getAllCategories");
       store.state.userData = await userData;
-      // context.commit("setUserData", userData);
-      context.commit("GET_ACCS_FROM_LOCAL_STORAGE");
     },
     async logout({ commit }) {
       await firebase.auth().signOut();

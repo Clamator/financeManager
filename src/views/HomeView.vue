@@ -5,7 +5,7 @@
   </div>
   <div>
     {{ this.$store.state.userData.bill }}
-    {{ this.$store.state.userData.name }}
+    {{ this.$store.state.userData.lastName }}
   </div>
 </template>
 

@@ -22,11 +22,6 @@
         data-bs-target="#editCategory"
       >
         Edit
-        <!--        <img-->
-        <!--          class="image-main"-->
-        <!--          src="https://cdn-icons-png.flaticon.com/512/259/259450.png"-->
-        <!--          alt=""-->
-        <!--        />-->
       </button>
       <button @click="deleteCategory($event)" class="remove-button">x</button>
     </div>
@@ -127,5 +122,8 @@ export default {
   top: 10px;
   right: 40px;
   cursor: pointer;
+}
+.card {
+  height: 190px;
 }
 </style>
