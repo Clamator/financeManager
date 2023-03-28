@@ -13,18 +13,18 @@ export default {
     accNameToEdit: "",
     accFullToEdit: {},
   },
-  mutations: {
-    updateCategory(state, { id, catSpent, catName, catLimit }) {
-      const category = store.state.categoriesAll.find((cat) => cat.id === id);
-      console.log(category);
-      if (category) {
-        category.catSpent = catSpent;
-        category.catName = catName;
-        category.catLimit = catLimit;
-        category.updatedAt = new Date();
-      }
-    },
-  },
+  // mutations: {
+  //   updateCategory(state, { id, catSpent, catName, catLimit }) {
+  //     const category = store.state.categoriesAll.find((cat) => cat.id === id);
+  //     console.log(category);
+  //     if (category) {
+  //       category.catSpent = catSpent;
+  //       category.catName = catName;
+  //       category.catLimit = catLimit;
+  //       category.updatedAt = new Date();
+  //     }
+  //   },
+  // },
   actions: {
     async upload_category(context, { catName, catSpent, catLimit }) {
       try {
@@ -62,7 +62,8 @@ export default {
       //   await store.dispatch("getAllCategories");
       const categoryPath = `users/${userId}/categories/${id}`;
       await update(ref(db, categoryPath), updates);
-      context.commit("updateCategory", { id, catSpent, catName, catLimit });
+      store.state.categoriesAll = await context.dispatch("getAllCategories");
+      // context.commit("updateCategory", { id, catSpent, catName, catLimit });
     },
     async getAllCategories(context) {
       let userId = await context.dispatch("getUid");
