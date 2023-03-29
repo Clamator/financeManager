@@ -19,7 +19,7 @@
 
         <wallet-side-bar></wallet-side-bar>
 
-        <options-buttons></options-buttons>
+        <limits-area></limits-area>
 
         <transaction-area></transaction-area>
         <categories-area></categories-area>
@@ -34,7 +34,7 @@
 import LogoMain from "@/components/LogoMain";
 import UserAccount from "@/components/UserAccount";
 import TransactionArea from "@/components/TransactionArea";
-import OptionsButtons from "@/components/OptionsButtons";
+import LimitsArea from "@/components/LimitsArea";
 import WalletSideBar from "@/components/WalletButton";
 import DiagramArea from "@/components/DiagramArea";
 import HomeButton from "@/components/HomeButton";
@@ -59,7 +59,7 @@ export default {
     LogoMain,
     UserAccount,
     TransactionArea,
-    OptionsButtons,
+    LimitsArea,
     WalletSideBar,
     DiagramArea,
     HomeButton,

@@ -6,7 +6,6 @@
   </div>
 </template>
 <script>
-import store from "@/store";
 import AuthLayout from "@/layouts/AuthLayout";
 import MainLayout from "@/layouts/MainLayout";
 import firebase from "firebase/compat/app";
@@ -37,16 +36,8 @@ export default {
   },
   created() {
     if (!firebase.auth().currentUser) {
-      console.log(firebase.auth().currentUser);
       this.$router.push("/auth");
     }
-    if (!localStorage.getItem("categories")) {
-      localStorage.setItem("categories", JSON.stringify({}));
-    }
-    if (!localStorage.getItem("userData")) {
-      localStorage.setItem("userData", JSON.stringify(this.user));
-    }
-    store.commit("GET_ACCS_FROM_LOCAL_STORAGE");
   },
 };
 </script>

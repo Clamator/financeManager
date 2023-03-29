@@ -15,7 +15,7 @@ const routes = [
     component: () => import("../views/DiagramView.vue"),
   },
   {
-    path: "/transactions.js",
+    path: "/transactions",
     name: "transactions",
     meta: { layout: "main" },
     component: () => import("../views/TransactionsView.vue"),
@@ -49,6 +49,12 @@ const routes = [
     name: "history",
     meta: { layout: "main" },
     component: () => import("../views/HistoryView"),
+  },
+  {
+    path: "/limits",
+    name: "limits",
+    meta: { layout: "main" },
+    component: () => import("../views/LimitsView"),
   },
 ];
 

@@ -11,7 +11,7 @@
           {{ cat.catName }}
         </span>
         <span class="card-text fw-bold fs-4 text-white">
-          {{ cat.catSpent }} / {{ cat.catLimit }}
+          Limit: {{ cat.catLimit }}
         </span>
       </div>
       <button
@@ -52,7 +52,6 @@
 import store from "@/store";
 export default {
   name: "CategoriesView",
-  components: {},
   data() {
     return {
       current: null,
