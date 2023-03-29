@@ -83,7 +83,7 @@ export default {
 <style scoped>
 form {
   margin: 120px auto 0;
-  max-width: 300px;
+  width: 300px;
 }
 .rega {
   display: block;

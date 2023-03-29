@@ -25,14 +25,14 @@
         <categories-area></categories-area>
       </ul>
       <hr />
-      <user-account></user-account>
+      <user-options></user-options>
     </div>
   </div>
 </template>
 
 <script>
 import LogoMain from "@/components/LogoMain";
-import UserAccount from "@/components/UserAccount";
+import UserOptions from "@/components/UserOptions";
 import TransactionArea from "@/components/TransactionArea";
 import LimitsArea from "@/components/LimitsArea";
 import WalletSideBar from "@/components/WalletButton";
@@ -57,7 +57,7 @@ export default {
   },
   components: {
     LogoMain,
-    UserAccount,
+    UserOptions,
     TransactionArea,
     LimitsArea,
     WalletSideBar,

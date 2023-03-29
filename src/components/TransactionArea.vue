@@ -1,6 +1,6 @@
 <template>
   <li>
-    <router-link to="/transactions" class="nav-link px-0 align-middle">
+    <router-link to="/history" class="nav-link px-0 align-middle">
       <i class="fs-4 bi-people"></i>
       <div class="d-flex flex-row">
         <div class="icon-general me-2">

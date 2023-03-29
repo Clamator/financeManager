@@ -3,19 +3,19 @@
     <div>
       <div class="breadcrumb-wrap">
         <router-link to="/history" class="breadcrumb history-button"
-          >История</router-link
+          >Return to history</router-link
         >
-        <a class="breadcrumb"> Расход </a>
+        <span class="btn-danger type"> Wasted </span>
       </div>
       <div class="row d-flex flex-wrap">
         <div class="col s12 m6">
           <div class="card red">
             <div class="card-body white-text">
-              <p>Описание: купил что-то для чего-то просто так</p>
-              <p>Сумма:</p>
-              <p>Категория:</p>
+              <p>Description: lorem ipsum</p>
+              <p>Sum:</p>
+              <p>Category:</p>
 
-              <small>12.12.12</small>
+              <small>Date: 12.12.12</small>
             </div>
           </div>
         </div>
@@ -38,6 +38,7 @@ export default {
 .breadcrumb {
   background-color: #f3c410;
   margin-right: 20px;
+  margin-bottom: 0;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
@@ -47,5 +48,13 @@ export default {
 }
 .card-body {
   max-width: 350px;
+}
+.type {
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.breadcrumb-wrap {
+  margin-bottom: 50px;
 }
 </style>
