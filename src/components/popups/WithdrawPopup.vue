@@ -38,7 +38,7 @@
           <div class="input-group">
             <input
               type="text"
-              v-model="moneyAmount"
+              v-model.number.trim="moneyAmount"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
@@ -133,16 +133,17 @@ export default {
         return;
       }
       if (this.isAbleToWithdrawMoney) {
-        console.log("Ok");
-        console.log(this.chosenCategoryId);
         try {
-          await store.dispatch("withdrawMoney", {
+          await store.dispatch("recordTransaction", {
             categoryId: this.chosenCategoryId,
             moneyAmount: this.moneyAmount,
             description: this.description,
             type: "withdraw",
             date: new Date().toJSON(),
           });
+          const bill = +store.state.userData.bill - this.moneyAmount;
+          store.state.userData.bill = bill;
+          await store.dispatch("updateInfo", { bill });
         } catch (e) {
           console.log(e);
         }
