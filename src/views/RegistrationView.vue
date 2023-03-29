@@ -156,7 +156,7 @@ export default {
       gender: "",
       customGender: "",
       agreeWithTerms: false,
-      bill: 10000,
+      bill: 0,
     };
   },
 

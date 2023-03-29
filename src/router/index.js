@@ -15,7 +15,7 @@ const routes = [
     component: () => import("../views/DiagramView.vue"),
   },
   {
-    path: "/transactions",
+    path: "/transactions.js",
     name: "transactions",
     meta: { layout: "main" },
     component: () => import("../views/TransactionsView.vue"),

@@ -1,19 +1,16 @@
 <template>
-  <div>
-    Home page, here will be a brief info from various sources about current
-    finance state
-  </div>
-  <div>
-    {{ this.$store.state.userData.bill }}
-    {{ this.$store.state.userData.lastName }}
-  </div>
+  <total-money></total-money>
 </template>
 
 <script>
 import store from "@/store";
-
+import TotalMoney from "@/components/homePageComponents/TotalMoney";
 export default {
   name: "HomeView",
+  components: {
+    TotalMoney,
+  },
+
   computed: {
     userData() {
       return store.getters.userData;

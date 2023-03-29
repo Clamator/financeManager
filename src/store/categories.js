@@ -13,18 +13,6 @@ export default {
     accNameToEdit: "",
     accFullToEdit: {},
   },
-  // mutations: {
-  //   updateCategory(state, { id, catSpent, catName, catLimit }) {
-  //     const category = store.state.categoriesAll.find((cat) => cat.id === id);
-  //     console.log(category);
-  //     if (category) {
-  //       category.catSpent = catSpent;
-  //       category.catName = catName;
-  //       category.catLimit = catLimit;
-  //       category.updatedAt = new Date();
-  //     }
-  //   },
-  // },
   actions: {
     async upload_category(context, { catName, catSpent, catLimit }) {
       try {

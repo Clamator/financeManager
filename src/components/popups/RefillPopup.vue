@@ -25,6 +25,7 @@
           <div class="input-group mb-3">
             <input
               type="text"
+              v-model="description"
               placeholder="Income source"
               class="form-control"
               aria-label="Sizing example input"
@@ -35,6 +36,7 @@
           <div class="input-group">
             <input
               type="text"
+              v-model="moneyAmount"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
@@ -65,18 +67,35 @@
 </template>
 
 <script>
+import store from "@/store";
 export default {
   name: "RefillPopup",
   data() {
     return {
       isRefillPopupOpen: false,
-      incomeSource: "",
+      description: "",
       moneyAmount: null,
     };
   },
   methods: {
-    refillWallet() {
+    async refillWallet() {
+      console.log(store.state.userData.bill);
+      if (
+        this.description === "" ||
+        this.moneyAmount === null ||
+        this.moneyAmount < 0
+      ) {
+        alert("Enter correct data!!!");
+        return;
+      }
+      try {
+        await store.dispatch("refillMoney", {});
+      } catch (e) {
+        console.log(e);
+      }
       this.isRefillPopupOpen = this.isRefillPopupOpen === false;
+      this.description = "";
+      this.moneyAmount = null;
     },
   },
 };

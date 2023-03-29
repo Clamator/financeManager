@@ -15,7 +15,7 @@
         class="rounded-circle"
       />
       <span ref="username" class="d-none d-sm-inline mx-1">
-        {{ userData.name }}
+        {{ userData.nickName }}
       </span>
     </a>
     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">

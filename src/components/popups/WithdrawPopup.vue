@@ -27,6 +27,7 @@
           <div class="input-group mb-3">
             <input
               type="text"
+              v-model="description"
               placeholder="Reason to waste your money"
               class="form-control"
               aria-label="Sizing example input"
@@ -37,11 +38,11 @@
           <div class="input-group">
             <input
               type="text"
+              v-model="moneyAmount"
               class="form-control"
               placeholder="Enter an amount of money"
               aria-label="Dollar amount (with dot and two decimal places)"
             />
-            <!--            <label for="categorySelect">Choose category</label>-->
             <select
               v-if="allCategories.length > 0"
               id="categorySelect"
@@ -101,23 +102,59 @@ export default {
     allCategories() {
       return store.getters.allCategories;
     },
+    isAbleToWithdrawMoney() {
+      return store.state.userData.bill >= this.moneyAmount;
+    },
   },
   async mounted() {
     store.state.categoriesAll =
       (await this.$store.dispatch("getAllCategories")) || {};
+    // chooses the category on mounting
+    if (this.allCategories.length) {
+      this.chosenCategoryId = this.allCategories[0].id;
+    }
   },
   data() {
     return {
       chosenCategoryId: "",
       isWithdrawPopupOpen: false,
-      expense: "",
-      moneyWasted: null,
+      description: "",
+      moneyAmount: null,
     };
   },
   methods: {
-    withdrawMoney() {
-      console.log(this.chosenCategoryId);
+    async withdrawMoney() {
+      if (
+        this.description === "" ||
+        this.moneyAmount === null ||
+        this.moneyAmount < 0
+      ) {
+        alert("Enter correct data!!!");
+        return;
+      }
+      if (this.isAbleToWithdrawMoney) {
+        console.log("Ok");
+        console.log(this.chosenCategoryId);
+        try {
+          await store.dispatch("withdrawMoney", {
+            categoryId: this.chosenCategoryId,
+            moneyAmount: this.moneyAmount,
+            description: this.description,
+            type: "withdraw",
+            date: new Date().toJSON(),
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      } else {
+        alert(`you need ${this.moneyAmount - store.state.userData.bill} more`);
+        return;
+      }
+
       this.isWithdrawPopupOpen = this.isWithdrawPopupOpen === false;
+      this.description = "";
+      this.moneyAmount = null;
+      this.chosenCategoryId = this.allCategories[0].id;
     },
   },
 };
