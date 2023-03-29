@@ -1,35 +1,35 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView";
-
+import firebase from "firebase/compat/app";
 const routes = [
   {
     path: "/",
     name: "home",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: HomeView,
   },
   {
     path: "/diagrams",
     name: "diagrams",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/DiagramView.vue"),
   },
   {
     path: "/transactions",
     name: "transactions",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/TransactionsView.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
     name: "notFound",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/NotFound.vue"),
   },
   {
     path: "/categories",
     name: "categories",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/CategoriesView.vue"),
   },
   {
@@ -47,13 +47,13 @@ const routes = [
   {
     path: "/history",
     name: "history",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/HistoryView"),
   },
   {
     path: "/limits",
     name: "limits",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/LimitsView"),
   },
 ];
@@ -62,5 +62,14 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+router.beforeEach((to, from, next) => {
+  const currentUser = firebase.auth().currentUser;
+  const isRequiredAuth = to.matched.some((record) => record.meta.auth);
 
+  if (!currentUser && isRequiredAuth) {
+    next("/auth");
+  } else {
+    next();
+  }
+});
 export default router;

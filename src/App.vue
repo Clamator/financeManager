@@ -8,7 +8,7 @@
 <script>
 import AuthLayout from "@/layouts/AuthLayout";
 import MainLayout from "@/layouts/MainLayout";
-import firebase from "firebase/compat/app";
+// import firebase from "firebase/compat/app";
 
 export default {
   name: "App",
@@ -35,9 +35,9 @@ export default {
     },
   },
   created() {
-    if (!firebase.auth().currentUser) {
-      this.$router.push("/auth");
-    }
+    // if (!firebase.auth().currentUser) {
+    //   this.$router.push("/auth");
+    // }
   },
 };
 </script>
