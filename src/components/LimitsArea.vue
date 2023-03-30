@@ -8,7 +8,7 @@
             src="https://icon-library.com/images/warning-icon/warning-icon-0.jpg"
           />
         </div>
-        <span class="ms-1 d-none d-sm-inline">Limits</span>
+        <span class="ms-1 d-none d-sm-inline my-text">Limits</span>
       </div>
     </router-link>
   </li>
@@ -20,4 +20,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.my-text {
+  color: white;
+}
+</style>

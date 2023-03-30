@@ -8,7 +8,7 @@
             src="https://www.iconarchive.com/download/i85541/graphicloads/100-flat/analytics.ico"
           />
         </div>
-        <span class="ms-1 d-none d-sm-inline">Analytics</span>
+        <span class="ms-1 d-none d-sm-inline my-text">Analytics</span>
       </div>
     </router-link>
   </li>
@@ -20,4 +20,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.my-text {
+  color: white;
+}
+</style>

@@ -62,6 +62,12 @@ const routes = [
     meta: { layout: "main", auth: true },
     component: () => import("../views/AccountView"),
   },
+  {
+    path: "/settings",
+    name: "settings",
+    meta: { layout: "main", auth: true },
+    component: () => import("../views/SettingsView"),
+  },
 ];
 
 const router = createRouter({

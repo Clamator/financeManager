@@ -8,7 +8,7 @@
             src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/list-circle-blue-512.png"
           />
         </div>
-        <span class="ms-1 d-none d-sm-inline">Categories</span>
+        <span class="ms-1 d-none d-sm-inline my-text">Categories</span>
       </div>
     </router-link>
   </li>
@@ -21,4 +21,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.my-text {
+  color: white;
+}
+</style>

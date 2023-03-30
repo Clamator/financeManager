@@ -9,7 +9,7 @@
             src="https://icon-library.com/images/home-icon-white-png/home-icon-white-png-11.jpg"
           />
         </div>
-        <span class="ms-1 d-none d-sm-inline">Home</span>
+        <span class="ms-1 d-none d-sm-inline my-text">Home</span>
       </div>
     </router-link>
   </li>
@@ -21,4 +21,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.my-text {
+  color: white;
+}
+</style>

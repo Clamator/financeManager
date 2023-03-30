@@ -7,19 +7,21 @@
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
-      <img
-        src="https://github.com/clamator.png"
-        alt="hugenerd"
-        width="30"
-        height="30"
-        class="rounded-circle"
-      />
+      <!--      <img-->
+      <!--        src="https://github.com/clamator.png"-->
+      <!--        alt="hugenerd"-->
+      <!--        width="30"-->
+      <!--        height="30"-->
+      <!--        class="rounded-circle"-->
+      <!--      />-->
       <span ref="username" class="d-none d-sm-inline mx-1">
         {{ userData.nickName }}
       </span>
     </a>
     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-      <li><a class="dropdown-item" href="#">Settings</a></li>
+      <li>
+        <router-link class="dropdown-item" to="/settings">Settings</router-link>
+      </li>
       <li>
         <router-link class="dropdown-item" to="/account">Profile</router-link>
       </li>
