@@ -1,10 +1,11 @@
 <template>
   <div>
     <div>
-      <div class="breadcrumb-wrap">
+      <div class="breadcrumb-wrap justify-content-start">
         <router-link to="/history" class="breadcrumb history-button"
-          >Back to history</router-link
-        >
+          >History
+        </router-link>
+        <strong> > &emsp; </strong>
         <span
           class="type"
           :class="{
@@ -56,7 +57,6 @@ export default {
     const id = this.$route.params.id;
     const transaction = await store.dispatch("getTransactionById", id);
     this.trnsType = await transaction.type;
-    await console.log(transaction.id);
     const category = await store.dispatch(
       "getCategoryById",
       transaction.categoryId
@@ -75,13 +75,12 @@ export default {
   vertical-align: top;
 }
 .breadcrumb {
-  background-color: #f3c410;
   margin-right: 20px;
   margin-bottom: 0;
+  margin-left: 15px;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
-  max-width: 150px;
   color: white;
   font-weight: 700;
 }
@@ -92,6 +91,7 @@ export default {
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
+  width: 150px;
 }
 .breadcrumb-wrap {
   margin-bottom: 50px;
