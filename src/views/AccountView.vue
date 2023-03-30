@@ -122,7 +122,6 @@ export default {
   async mounted() {
     const userDataMain = await store.dispatch("getUserDataBase");
     this.userData = await userDataMain;
-    await console.log(userDataMain);
   },
 };
 </script>
