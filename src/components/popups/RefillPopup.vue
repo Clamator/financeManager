@@ -79,7 +79,6 @@ export default {
   },
   methods: {
     async refillWallet() {
-      console.log(store.state.userData.bill);
       if (
         this.description === "" ||
         this.moneyAmount === null ||
@@ -96,7 +95,6 @@ export default {
           type: "refill",
           date: new Date().toJSON(),
         });
-        console.log(typeof +store.state.userData.bill);
         const bill = +store.state.userData.bill + +this.moneyAmount;
         store.state.userData.bill = bill;
         await store.dispatch("updateInfo", { bill });

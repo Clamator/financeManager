@@ -13,15 +13,13 @@
       >
         <home-button></home-button>
 
-        <refill-withdraw-buttons></refill-withdraw-buttons>
-
         <diagram-area></diagram-area>
 
-        <wallet-side-bar></wallet-side-bar>
+        <!--        <wallet-side-bar></wallet-side-bar>-->
 
         <limits-area></limits-area>
 
-        <transaction-area></transaction-area>
+        <history-area></history-area>
         <categories-area></categories-area>
       </ul>
       <hr />
@@ -33,12 +31,11 @@
 <script>
 import LogoMain from "@/components/LogoMain";
 import UserOptions from "@/components/UserOptions";
-import TransactionArea from "@/components/TransactionArea";
+import HistoryArea from "@/components/HistoryArea";
 import LimitsArea from "@/components/LimitsArea";
-import WalletSideBar from "@/components/WalletButton";
+// import WalletSideBar from "@/components/WalletButton";
 import DiagramArea from "@/components/DiagramArea";
 import HomeButton from "@/components/HomeButton";
-import RefillWithdrawButtons from "@/components/RefillWithdrawButtons";
 import CategoriesArea from "@/components/CategoriesArea";
 
 export default {
@@ -58,12 +55,11 @@ export default {
   components: {
     LogoMain,
     UserOptions,
-    TransactionArea,
+    HistoryArea,
     LimitsArea,
-    WalletSideBar,
+    // WalletSideBar,
     DiagramArea,
     HomeButton,
-    RefillWithdrawButtons,
     CategoriesArea,
   },
 };

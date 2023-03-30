@@ -15,10 +15,10 @@ const routes = [
     component: () => import("../views/DiagramView.vue"),
   },
   {
-    path: "/transactions",
-    name: "transactions",
+    path: "/detail/:id",
+    name: "details",
     meta: { layout: "main", auth: true },
-    component: () => import("../views/TransactionsView.vue"),
+    component: () => import("../views/DetailsView"),
   },
   {
     path: "/:pathMatch(.*)*",

@@ -50,5 +50,19 @@ export default {
         console.log(e);
       }
     },
+    async getTransactionById(context, id) {
+      try {
+        let userId = await context.dispatch("getUid");
+        const dbRef = ref(getDatabase());
+        const transactionFetched = await get(
+          child(dbRef, `users/${userId}/transactions/${id}`)
+        );
+        // const transactions = [];
+        if (!transactionFetched) return;
+        return { ...transactionFetched.val(), id: id };
+      } catch (e) {
+        console.log(e);
+      }
+    },
   },
 };

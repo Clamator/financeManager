@@ -7,6 +7,7 @@
       <p class="card-text">
         You have {{ this.$store.state.userData.bill }} money in your wallet
       </p>
+      <refill-withdraw-buttons></refill-withdraw-buttons>
       <div
         v-if="this.$store.state.userData.bill === 0"
         class="info-null-balance"
@@ -16,23 +17,17 @@
           state</span
         >
       </div>
-      <button
-        type="button"
-        style="width: 10rem; text-align: center"
-        class="btn btn-success"
-        data-bs-toggle="modal"
-        data-bs-target="#refillBackdrop"
-        @click="isRefillPopupOpen = true"
-      >
-        Refill
-      </button>
     </div>
   </div>
 </template>
 
 <script>
+import refillWithdrawButtons from "@/components/RefillWithdrawButtons";
 export default {
   name: "TotalMoney",
+  components: {
+    refillWithdrawButtons,
+  },
   data() {
     return {
       isRefillPopupOpen: false,

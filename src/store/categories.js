@@ -81,5 +81,15 @@ export default {
       });
       return cats || {};
     },
+    async getCategoryById(context, id) {
+      let userId = await context.dispatch("getUid");
+      const dbRef = ref(getDatabase());
+      const categoryFetched = (
+        await get(child(dbRef, `users/${userId}/categories/${id}`))
+      ).val();
+      if (!categoryFetched) return;
+      // console.log(...categoryFetched.catLimit);
+      return { ...categoryFetched, id: id };
+    },
   },
 };
