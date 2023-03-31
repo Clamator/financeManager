@@ -7,13 +7,13 @@
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
-      <!--      <img-->
-      <!--        src="https://github.com/clamator.png"-->
-      <!--        alt="hugenerd"-->
-      <!--        width="30"-->
-      <!--        height="30"-->
-      <!--        class="rounded-circle"-->
-      <!--      />-->
+      <img
+        :src="userData.photoURL"
+        alt="hugenerd"
+        width="30"
+        height="30"
+        class="rounded-circle me-2"
+      />
       <span ref="username" class="d-none d-sm-inline mx-1">
         {{ userData.nickName }}
       </span>

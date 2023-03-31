@@ -8,6 +8,7 @@
 <script>
 import AuthLayout from "@/layouts/AuthLayout";
 import MainLayout from "@/layouts/MainLayout";
+import store from "@/store";
 // import firebase from "firebase/compat/app";
 
 export default {
@@ -38,6 +39,10 @@ export default {
     // if (!firebase.auth().currentUser) {
     //   this.$router.push("/auth");
     // }
+  },
+  async mounted() {
+    store.state.userData =
+      (await this.$store.dispatch("getUserDataBase")) || {};
   },
 };
 </script>
