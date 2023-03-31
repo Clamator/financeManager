@@ -8,7 +8,10 @@
       aria-expanded="false"
     >
       <img
-        :src="userData.photoURL"
+        :src="
+          userData.photoURL ||
+          'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp'
+        "
         alt="hugenerd"
         width="30"
         height="30"

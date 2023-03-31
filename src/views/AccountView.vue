@@ -6,7 +6,10 @@
           <div class="card mb-4">
             <div class="card-body text-center">
               <img
-                :src="userData.photoURL"
+                :src="
+                  userData.photoURL ||
+                  'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp'
+                "
                 alt="avatar"
                 class="rounded-circle img-fluid"
                 style="width: 150px"
