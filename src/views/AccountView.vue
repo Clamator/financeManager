@@ -16,12 +16,15 @@
                 {{ userData.post ? userData.post : "Post not provided" }}
               </p>
               <p class="text-muted mb-4">
+                {{ userData.city ? userData.city : "City not provided" }}
+                /
                 {{
                   userData.address ? userData.address : "Address not provided"
                 }}
               </p>
             </div>
           </div>
+
           <div class="card mb-4 mb-lg-0">
             <div class="card-body p-0">
               <ul class="list-group list-group-flush rounded-3">
@@ -90,6 +93,8 @@
                 </div>
                 <div class="col-sm-9">
                   <p class="text-muted mb-0">
+                    {{ userData.city ? userData.city : "City not provided" }}
+                    /
                     {{
                       userData.address
                         ? userData.address
@@ -111,14 +116,15 @@ import store from "@/store";
 // import { mapGetters } from "vuex";
 export default {
   name: "AccountView",
+  head: {
+    title: "Account info",
+    meta: [{ name: "description", content: "My page description" }],
+  },
   data() {
     return {
       userData: [],
     };
   },
-  // computed: {
-  //   ...mapGetters(["userData"]),
-  // },
   async mounted() {
     const userDataMain = await store.dispatch("getUserDataBase");
     this.userData = await userDataMain;
