@@ -11,7 +11,7 @@
       <Pie :data="pieDataIncome" :options="pieOptions" />
     </div>
   </div>
-  <div class="h1" v-if="!this.transactions.length || !this.categories.length">
+  <div class="h1" v-if="!this.transactions.length">
     <p>Here will be displayed diagrams about your incomes and withdraws</p>
     <refill-withdraw-buttons></refill-withdraw-buttons>
   </div>
