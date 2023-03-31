@@ -12,7 +12,7 @@
     </thead>
 
     <tbody>
-      <tr v-for="(trnc, indx) in transactions" :key="trnc.id">
+      <tr v-for="(trnc, indx) in transacts()" :key="trnc.id">
         <td class="td">{{ indx + 1 }}</td>
         <td class="td">{{ trnc.moneyAmount }}</td>
         <td class="td">{{ trnc.date }}</td>
@@ -35,15 +35,50 @@
       </tr>
     </tbody>
   </table>
+  <br />
+  <div class="d-flex flex-row justify-content-sm-center">
+    <button
+      v-if="this.page >= 2"
+      class="btn btn-secondary me-3"
+      @click="page = page - 1"
+    >
+      Prev
+    </button>
+    <div class="btn btn-success me-3">
+      {{ this.page }}
+    </div>
+    <button
+      v-if="hasNextPage"
+      class="btn btn-secondary"
+      @click="page = page + 1"
+    >
+      Next
+    </button>
+  </div>
 </template>
 
 <script>
 export default {
   name: "HistoryTable",
+  data() {
+    return {
+      page: 1,
+      hasNextPage: true,
+    };
+  },
   props: {
     transactions: {
       required: true,
       type: Array,
+    },
+  },
+  created() {},
+  methods: {
+    transacts() {
+      const start = (this.page - 1) * 7;
+      const end = this.page * 7;
+      this.hasNextPage = this.transactions.length > end;
+      return this.transactions.slice(start, end);
     },
   },
 };
