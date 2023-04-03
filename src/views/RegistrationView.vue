@@ -121,7 +121,7 @@
           id="personalGender"
         />
       </div>
-      <div class="checkbox_main mb-3">
+      <div class="checkbox mb-3">
         <label>
           <input
             type="checkbox"
