@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="checkbox - storybook">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/RadioButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="Radiobutton - storybook">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HistoryTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HistoryTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RefillWithdrawButtons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RefillWithdrawButtons.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Vue Single File Component" />
         <option value="JavaScript File" />
         <option value="CSS File" />
@@ -93,7 +93,7 @@
       <workItem from="1680328127568" duration="266000" />
       <workItem from="1680328425499" duration="9787000" />
       <workItem from="1680422649480" duration="13213000" />
-      <workItem from="1680496586964" duration="21654000" />
+      <workItem from="1680496586964" duration="27157000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -137,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680516916779</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Radiobutton - storybook">
+      <created>1680522265815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680522265815</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +167,8 @@
     <MESSAGE value="account photo now available by default" />
     <MESSAGE value="testing storybook js - dropdown and reactive props" />
     <MESSAGE value="checkbox - storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkbox - storybook" />
+    <MESSAGE value="Radiobutton - storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radiobutton - storybook" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
