@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="testing storybook js">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButton.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonDropdown.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonDropdown.vue" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="testing storybook js - dropdown and reactive props">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/CheckBox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CardFirstComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/CardFirstComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +75,8 @@
       <workItem from="1680265447439" duration="7312000" />
       <workItem from="1680328127568" duration="266000" />
       <workItem from="1680328425499" duration="9787000" />
-      <workItem from="1680422649480" duration="13148000" />
+      <workItem from="1680422649480" duration="13213000" />
+      <workItem from="1680496586964" duration="16750000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -112,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680276361636</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="testing storybook js - dropdown and reactive props">
+      <created>1680445830242</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680445830242</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +134,8 @@
     <MESSAGE value="added two diagrams onto analytics page" />
     <MESSAGE value="added two diagrams onto analytics page, if there is no data - user will see a message and button to add transactions" />
     <MESSAGE value="account photo now available by default" />
-    <option name="LAST_COMMIT_MESSAGE" value="account photo now available by default" />
+    <MESSAGE value="testing storybook js - dropdown and reactive props" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing storybook js - dropdown and reactive props" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
