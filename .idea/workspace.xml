@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="Radiobutton - storybook">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.stories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="Checkbox switcher - storybook">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/CheckboxMain.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegistrationView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegistrationView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/CheckBox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
       <workItem from="1680328127568" duration="266000" />
       <workItem from="1680328425499" duration="9787000" />
       <workItem from="1680422649480" duration="13213000" />
-      <workItem from="1680496586964" duration="27157000" />
+      <workItem from="1680496586964" duration="28123000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -144,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680522265815</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Checkbox switcher - storybook">
+      <created>1680530605979</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680530605979</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +178,8 @@
     <MESSAGE value="testing storybook js - dropdown and reactive props" />
     <MESSAGE value="checkbox - storybook" />
     <MESSAGE value="Radiobutton - storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radiobutton - storybook" />
+    <MESSAGE value="Checkbox switcher - storybook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkbox switcher - storybook" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
