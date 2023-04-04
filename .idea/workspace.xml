@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="Checkbox switcher - storybook">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="Checkbox switcher and checkbox - storybook - refactored 0.1.2">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/assets/ToastMessage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/ToastMessage.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/ToastMessage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegistrationView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegistrationView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/CheckboxMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/assets/CheckboxMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +28,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../storybook-test" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -94,7 +93,8 @@
       <workItem from="1680328127568" duration="266000" />
       <workItem from="1680328425499" duration="9787000" />
       <workItem from="1680422649480" duration="13213000" />
-      <workItem from="1680496586964" duration="28811000" />
+      <workItem from="1680496586964" duration="32319000" />
+      <workItem from="1680584210616" duration="5016000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -159,7 +159,42 @@
       <option name="project" value="LOCAL" />
       <updated>1680531455144</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Checkbox switcher and checkbox - storybook - refactored">
+      <created>1680532138507</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680532138507</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Checkbox switcher and checkbox - storybook - refactored">
+      <created>1680534538940</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680534538940</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Checkbox switcher and checkbox - storybook - refactored 0.1.0">
+      <created>1680534653754</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680534653754</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Checkbox switcher and checkbox - storybook - refactored 0.1.1">
+      <created>1680534809428</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680534809428</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Checkbox switcher and checkbox - storybook - refactored 0.1.2">
+      <created>1680535059625</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680535059625</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +219,11 @@
     <MESSAGE value="checkbox - storybook" />
     <MESSAGE value="Radiobutton - storybook" />
     <MESSAGE value="Checkbox switcher - storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checkbox switcher - storybook" />
+    <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored" />
+    <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.0" />
+    <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.1" />
+    <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkbox switcher and checkbox - storybook - refactored 0.1.2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
