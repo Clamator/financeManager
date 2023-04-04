@@ -19,7 +19,7 @@
       <div class="row d-flex flex-wrap">
         <div class="col s12 m6">
           <div class="card red">
-            <div class="card-body white-text">
+            <div class="card-body-main white-text">
               <p>
                 Description: {{ transaction ? transaction.description : "" }}
               </p>
@@ -84,7 +84,7 @@ export default {
   color: white;
   font-weight: 700;
 }
-.card-body {
+.card-body-main {
   max-width: 350px;
 }
 .type {

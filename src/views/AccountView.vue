@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="card mb-4">
-            <div class="card-body text-center">
+            <div class="card-body-main text-center">
               <img
                 :src="
                   userData.photoURL ||
@@ -29,7 +29,7 @@
           </div>
 
           <div class="card mb-4 mb-lg-0">
-            <div class="card-body p-0">
+            <div class="card-body-main p-0">
               <ul class="list-group list-group-flush rounded-3">
                 <li
                   class="list-group-item d-flex justify-content-between align-items-center p-3"
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-8">
           <div class="card mb-4">
-            <div class="card-body">
+            <div class="card-body-main">
               <div class="row">
                 <div class="col-sm-3">
                   <p class="mb-0">Full Name</p>

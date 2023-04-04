@@ -6,7 +6,7 @@
       v-for="cat in allCategories"
       :key="cat.id"
     >
-      <div class="card-body d-flex flex-column justify-content-sm-center">
+      <div class="card-body-main d-flex flex-column justify-content-sm-center">
         <span class="card-title fw-bold fs-4 text-white">
           {{ cat.catName }}
         </span>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="card" style="width: 18rem; min-height: 130px">
-      <div class="card-body">
+      <div class="card-body-main">
         <input
           v-model="this.category"
           placeholder="Enter category name."

@@ -2,7 +2,7 @@
   <div class="totalMoney"></div>
 
   <div class="card" style="width: 18rem; background: #5fd59a; color: white">
-    <div class="card-body">
+    <div class="card-body-main">
       <h5 class="card-title">My wallet</h5>
       <p class="card-text">
         You have {{ this.$store.state.userData.bill }} money in your wallet
