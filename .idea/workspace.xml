@@ -4,31 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="added card combined">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/CardFirst/CardFirst.css" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="refactored location storage">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/PrimaryButton/PrimaryButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/PrimaryButtonControl/PrimaryButtonControl.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/CheckboxMain.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/RadioButton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/SwitcherButton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/ToastMessage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/assets/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CardFirst.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CardFirstComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CheckboxButton.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButton.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButton.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonControl.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonDropdown.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/PrimaryButtonDropdown.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/RadioButton.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/SwitcherButton.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/ToastMessage.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/ToastMessage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CardFirst/CardFirst.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardBody.stories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardBody.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardButton.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardText.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/cardStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/Check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/CheckboxButton/Check.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/Radio.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/RadioDis.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +79,8 @@
       <recent name="C:\coding\storybook-test\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\coding\storybook-test\src\components\TestStories\RadioButton" />
+      <recent name="C:\coding\storybook-test\src\components\TestStories\CheckboxButton" />
       <recent name="C:\coding\storybook-test\src\components\PrimaryButtonDropdown" />
     </key>
   </component>
@@ -126,7 +118,7 @@
       <workItem from="1680496586964" duration="32319000" />
       <workItem from="1680584210616" duration="11383000" />
       <workItem from="1680610573081" duration="2197000" />
-      <workItem from="1680672716060" duration="1578000" />
+      <workItem from="1680672716060" duration="6380000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -240,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680605219461</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactored location storage">
+      <created>1680674624238</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680674624238</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +270,8 @@
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.2" />
     <MESSAGE value="toastmsg added to storybook" />
     <MESSAGE value="added card combined" />
-    <option name="LAST_COMMIT_MESSAGE" value="added card combined" />
+    <MESSAGE value="refactored location storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored location storage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
