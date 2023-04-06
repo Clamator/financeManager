@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="refactored location storage">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/PrimaryButton/PrimaryButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/PrimaryButtonControl/PrimaryButtonControl.css" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="refactored location storage - 1.1">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/contactsFormComponent/contactsFormComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/continueButtonComponent/continueButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/masks/phoneMask.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/singInComponent/signInComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/stepHeaderComponent/stepHeaderComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/stepPageComponent/stepPageComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/secondPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/CardFirst/CardFirst.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardBody.stories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardBody.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardButton.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/CardText.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/cardCombined/cardStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/Check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/TestStories/CheckboxButton/Check.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/Radio.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/img/RadioDis.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/stories/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/stories/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/stories/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/stories/header.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Vue Single File Component" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -119,6 +121,8 @@
       <workItem from="1680584210616" duration="11383000" />
       <workItem from="1680610573081" duration="2197000" />
       <workItem from="1680672716060" duration="6380000" />
+      <workItem from="1680687922100" duration="5117000" />
+      <workItem from="1680755757935" duration="29625000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -239,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680674624238</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactored location storage - 1.1">
+      <created>1680688058426</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680688058426</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +282,8 @@
     <MESSAGE value="toastmsg added to storybook" />
     <MESSAGE value="added card combined" />
     <MESSAGE value="refactored location storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored location storage" />
+    <MESSAGE value="refactored location storage - 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored location storage - 1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
