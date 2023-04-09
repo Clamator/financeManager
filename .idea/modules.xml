@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/finance-manager.iml" filepath="$PROJECT_DIR$/.idea/finance-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/../storybook-test/.idea/storybook-test.iml" filepath="$PROJECT_DIR$/../storybook-test/.idea/storybook-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../storyvue2/storybookvue2/.idea/storybookvue2.iml" filepath="$PROJECT_DIR$/../storyvue2/storybookvue2/.idea/storybookvue2.iml" />
     </modules>
   </component>
 </project>

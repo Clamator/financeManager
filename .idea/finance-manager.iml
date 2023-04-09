@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="storybook-test" />
+    <orderEntry type="module" module-name="storybookvue2" />
   </component>
 </module>
