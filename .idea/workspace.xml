@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="transpiled page into vue2">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryCompany.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliverySettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryTotalInfo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/MapComponent.vue" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="commit before page3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/continueButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/continueButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/stepPageComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/UserContactInfoPage/stepPageComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storyvue2/storybookvue2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storyvue2/storybookvue2/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +116,7 @@
       <workItem from="1680933026411" duration="1692000" />
       <workItem from="1681014445444" duration="18890000" />
       <workItem from="1681054688110" duration="14000" />
-      <workItem from="1681111669631" duration="2035000" />
+      <workItem from="1681111669631" duration="2724000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -301,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681040320713</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="commit before page3">
+      <created>1681113993014</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681113993014</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +340,8 @@
     <MESSAGE value="made some changes of vue3 to try to add vue2 support" />
     <MESSAGE value="created a project on Vue2, first launch of it was 50/50 successful, need to refactor some things" />
     <MESSAGE value="transpiled page into vue2" />
-    <option name="LAST_COMMIT_MESSAGE" value="transpiled page into vue2" />
+    <MESSAGE value="commit before page3" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit before page3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
