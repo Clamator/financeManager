@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="done with visual, added some logic, need to be transpiled into vue2 component and add validation + storybook">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="bomzh validation done">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" afterDir="false" />
@@ -121,7 +122,9 @@
       <workItem from="1681111669631" duration="26197000" />
       <workItem from="1681187356310" duration="1022000" />
       <workItem from="1681188825843" duration="25826000" />
-      <workItem from="1681275998300" duration="8821000" />
+      <workItem from="1681275998300" duration="9780000" />
+      <workItem from="1681293936650" duration="599000" />
+      <workItem from="1681297786425" duration="1791000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -326,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681226887139</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="bomzh validation done">
+      <created>1681291392859</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681291392859</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added two diagrams onto analytics page, if there is no data - user will see a message and button to add transactions" />
     <MESSAGE value="account photo now available by default" />
     <MESSAGE value="testing storybook js - dropdown and reactive props" />
     <MESSAGE value="checkbox - storybook" />
@@ -369,7 +378,8 @@
     <MESSAGE value="commit before page3 - refactor the ContinueButtonComponent" />
     <MESSAGE value="made some visual and a little logic" />
     <MESSAGE value="done with visual, added some logic, need to be transpiled into vue2 component and add validation + storybook" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with visual, added some logic, need to be transpiled into vue2 component and add validation + storybook" />
+    <MESSAGE value="bomzh validation done" />
+    <option name="LAST_COMMIT_MESSAGE" value="bomzh validation done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
