@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="bomzh validation done">
-      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" afterDir="false" />
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="storybook done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliverySettingsAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliverySettingsAddress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +122,7 @@
       <workItem from="1681188825843" duration="25826000" />
       <workItem from="1681275998300" duration="9780000" />
       <workItem from="1681293936650" duration="599000" />
-      <workItem from="1681297786425" duration="1791000" />
+      <workItem from="1681297786425" duration="3066000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -336,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681291392859</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="storybook done">
+      <created>1681299884422</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681299884422</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +359,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="account photo now available by default" />
     <MESSAGE value="testing storybook js - dropdown and reactive props" />
     <MESSAGE value="checkbox - storybook" />
     <MESSAGE value="Radiobutton - storybook" />
@@ -379,7 +383,8 @@
     <MESSAGE value="made some visual and a little logic" />
     <MESSAGE value="done with visual, added some logic, need to be transpiled into vue2 component and add validation + storybook" />
     <MESSAGE value="bomzh validation done" />
-    <option name="LAST_COMMIT_MESSAGE" value="bomzh validation done" />
+    <MESSAGE value="storybook done" />
+    <option name="LAST_COMMIT_MESSAGE" value="storybook done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
