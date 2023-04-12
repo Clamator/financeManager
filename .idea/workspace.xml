@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="storybook done">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="storybook done 0.1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/ThirdPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/thirdPage.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storyvue2/storybookvue2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storyvue2/storybookvue2/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../storybook-test" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../storyvue2/storybookvue2" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -51,7 +50,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/coding/webstorm/vue/proj1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/coding/storyvue2/storybookvue2/src/components/OrderPagesInetStore/pages/DeliverySettingPage&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -66,9 +65,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\coding\storyvue2\storybookvue2\src\components\OrderPagesInetStore\pages\DeliverySettingPage" />
       <recent name="C:\coding\storybook-test\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\coding\storyvue2\storybookvue2\src\components\OrderPagesInetStore\pages" />
       <recent name="C:\coding\storybook-test\src\components\OrderPagesInetStore\pages\UserContactInfoPage" />
       <recent name="C:\coding\storybook-test\src\components\TestStories\RadioButton" />
       <recent name="C:\coding\storybook-test\src\components\TestStories\CheckboxButton" />
@@ -122,7 +123,8 @@
       <workItem from="1681188825843" duration="25826000" />
       <workItem from="1681275998300" duration="9780000" />
       <workItem from="1681293936650" duration="599000" />
-      <workItem from="1681297786425" duration="3066000" />
+      <workItem from="1681297786425" duration="5582000" />
+      <workItem from="1681305795601" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="added two diagrams onto analytics page">
       <created>1680273945167</created>
@@ -341,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681299884422</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="storybook done 0.1.1">
+      <created>1681301189678</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681301189678</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +368,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testing storybook js - dropdown and reactive props" />
     <MESSAGE value="checkbox - storybook" />
     <MESSAGE value="Radiobutton - storybook" />
     <MESSAGE value="Checkbox switcher - storybook" />
@@ -384,7 +392,8 @@
     <MESSAGE value="done with visual, added some logic, need to be transpiled into vue2 component and add validation + storybook" />
     <MESSAGE value="bomzh validation done" />
     <MESSAGE value="storybook done" />
-    <option name="LAST_COMMIT_MESSAGE" value="storybook done" />
+    <MESSAGE value="storybook done 0.1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="storybook done 0.1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
