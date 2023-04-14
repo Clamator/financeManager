@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="storybook done 0.1.1">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="before radiobuttons change commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliverySettingsAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliverySettingsAddress.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/styles/thirdPageStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/styles/thirdPageStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../storybook-test/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681301189678</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="before radiobuttons change commit">
+      <created>1681466686466</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681466686466</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checkbox - storybook" />
     <MESSAGE value="Radiobutton - storybook" />
     <MESSAGE value="Checkbox switcher - storybook" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored" />
@@ -396,7 +398,8 @@
     <MESSAGE value="bomzh validation done" />
     <MESSAGE value="storybook done" />
     <MESSAGE value="storybook done 0.1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="storybook done 0.1.1" />
+    <MESSAGE value="before radiobuttons change commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="before radiobuttons change commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
