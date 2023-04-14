@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="radiobuttons 50/50 completed">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="radiobuttons 70/30 completed">
+      <change afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressFormNew.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/AddressForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Vue Single File Component" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -363,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681473568062</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="radiobuttons 70/30 completed">
+      <created>1681474318652</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681474318652</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Checkbox switcher - storybook" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.0" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.1" />
@@ -406,7 +414,8 @@
     <MESSAGE value="storybook done 0.1.1" />
     <MESSAGE value="before radiobuttons change commit" />
     <MESSAGE value="radiobuttons 50/50 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="radiobuttons 50/50 completed" />
+    <MESSAGE value="radiobuttons 70/30 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="radiobuttons 70/30 completed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
