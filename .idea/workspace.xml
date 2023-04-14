@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="before radiobuttons change commit">
+    <list default="true" id="995ec3cb-67bc-4f3e-abef-60a5a836014f" name="Changes" comment="radiobuttons 50/50 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../storybook-test/src/components/OrderPagesInetStore/pages/DeliverySettingPage/pageComponents/DeliveryMethod.vue" afterDir="false" />
     </list>
@@ -356,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681466686466</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="radiobuttons 50/50 completed">
+      <created>1681473568062</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681473568062</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +381,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Radiobutton - storybook" />
     <MESSAGE value="Checkbox switcher - storybook" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored" />
     <MESSAGE value="Checkbox switcher and checkbox - storybook - refactored 0.1.0" />
@@ -399,7 +405,8 @@
     <MESSAGE value="storybook done" />
     <MESSAGE value="storybook done 0.1.1" />
     <MESSAGE value="before radiobuttons change commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="before radiobuttons change commit" />
+    <MESSAGE value="radiobuttons 50/50 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="radiobuttons 50/50 completed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
