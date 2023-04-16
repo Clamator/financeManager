@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../storyvue2/storybookvue2/src/av100/.idea/av100.iml" filepath="$PROJECT_DIR$/../storyvue2/storybookvue2/src/av100/.idea/av100.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/finance-manager.iml" filepath="$PROJECT_DIR$/.idea/finance-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/../webstorm/vue/proj1/.idea/proj1.iml" filepath="$PROJECT_DIR$/../webstorm/vue/proj1/.idea/proj1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../storybook-test/.idea/storybook-test.iml" filepath="$PROJECT_DIR$/../storybook-test/.idea/storybook-test.iml" />
