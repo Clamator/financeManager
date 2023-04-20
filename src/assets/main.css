@@ -53,3 +53,6 @@ span {
   max-width: 1200px;
   margin: 0 auto;
 }
+.card-body-main {
+  padding: 20px;
+}

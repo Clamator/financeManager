@@ -11,16 +11,19 @@
         class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
         id="menu"
       >
-        <home-button></home-button>
-
-        <diagram-area></diagram-area>
-
-        <!--        <wallet-side-bar></wallet-side-bar>-->
-
+        <li>
+          <home-button></home-button>
+        </li>
+        <li class="nav-item">
+          <diagram-area></diagram-area>
+        </li>
         <limits-area></limits-area>
-
-        <history-area></history-area>
-        <categories-area></categories-area>
+        <li class="nav-item">
+          <history-area></history-area>
+        </li>
+        <li class="nav-item">
+          <categories-area></categories-area>
+        </li>
       </ul>
       <hr />
       <user-options></user-options>

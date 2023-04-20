@@ -1,17 +1,15 @@
 <template>
-  <li>
-    <router-link to="/diagrams" class="nav-link px-0 align-middle">
-      <i class="fs-4 bi-table"></i>
-      <div class="d-flex flex-row">
-        <div class="icon-general me-2">
-          <img
-            src="https://www.iconarchive.com/download/i85541/graphicloads/100-flat/analytics.ico"
-          />
-        </div>
-        <span class="ms-1 d-none d-sm-inline my-text">Analytics</span>
+  <router-link to="/diagrams" class="nav-link px-0 align-middle">
+    <i class="fs-4 bi-table"></i>
+    <div class="d-flex flex-row">
+      <div class="icon-general me-2">
+        <img
+          src="https://www.iconarchive.com/download/i85541/graphicloads/100-flat/analytics.ico"
+        />
       </div>
-    </router-link>
-  </li>
+      <span class="ms-1 d-none d-sm-inline my-text">Analytics</span>
+    </div>
+  </router-link>
 </template>
 
 <script>
